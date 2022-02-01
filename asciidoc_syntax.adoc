@@ -1,0 +1,537 @@
+---
+sidebar: sidebar 
+permalink: asciidoc_syntax.html 
+---
+= AsciiiDoc 참조
+:toc: macro
+:hardbreaks:
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+AsciiiDoc는 Markdown과 유사한 간단한 마크업 언어입니다. 표준 Markdown 대신 AsciiiDoc를 선택했습니다. 이 제품은 더 많은 기본 기능을 제공하기 때문입니다. 더 강력하지만 사용도 간편합니다. 아래 섹션을 참조하여 AsciiiDoc에 쓰기를 시작하십시오.
+
+를 참조하십시오 http://asciidoctor.org/docs/user-manual/["AsciiDoctor 사용 설명서"^] 추가 도움말을 참조하십시오.
+
+
+
+== 기본 사항
+
+간단한 문서 업데이트를 위해 몇 가지 사항을 알고 있어야 합니다.
+
+
+
+=== 제목
+
+....
+= Page title
+== Level 1 section
+=== Level 2 section
+==== Level 3 section
+===== Level 4 section
+....
+페이지 제목은 하나만 지정할 수 있지만 섹션 제목은 여러 개일 수 있습니다. 예를 들어, 레벨 2 및 레벨 3 섹션이 포함된 레벨 1 섹션 3개가 있을 수 있습니다.
+
+....
+= Page title
+== Level 1 section
+=== Level 2 section
+== Level 1 section
+== Level 1 section
+=== Level 2 section
+==== Level 3 section
+....
+
+
+=== 굵은 텍스트
+
+....
+*Text*
+....
+
+
+=== 기울임꼴 텍스트
+
+....
+_Text_
+....
+
+
+=== 글머리 기호 목록
+
+....
+* Item 1
++
+Continuation text for the previous list item.
+
+* Item 2
+** Item 2a
+
+* Item 3
+....
+
+TIP: 는 목록 연속입니다. 이 경우 텍스트가 목록 항목과 인라인 상태로 유지됩니다. 를 생략하면 해당 줄의 서식에 영향을 줍니다.
+
+
+
+=== 라벨이 붙은 목록
+
+....
+Item 1::
+Description 1
+
+Item 2::
+Description 2
+....
+또는
+
+....
+[horizontal]
+Item 1::
+Description 1
+
+Item 2::
+Description 2
+....
+항목 1 위에 [horizontal](수평)을 추가하면 레이블과 설명이 같은 줄에 나타납니다. 아주 짧은 설명을 할 때 잘 작동합니다.
+
+* [수평] * 가 없는 예
+
+항목 1:: 설명 1
+항목 2:: 설명 2
+
+
+* [수평] * 의 예
+
+항목 1:: 설명 1
+항목 2:: 설명 2
+
+
+
+
+=== 단계
+
+....
+.Steps
+
+. Step 1
+
+. Step 2
++
+Info for step 2
+
+. Step 3
+.. Step 3a
+.. Step 3b
+
+. Step 4
+....
+
+TIP: 는 목록 연속입니다. 이 경우 텍스트가 목록 항목과 인라인 상태로 유지됩니다. 를 생략하면 해당 줄의 서식에 영향을 줍니다.
+
+
+
+=== 이미지
+
+....
+image:file.png["alt text"]
+....
+alt text_는 대체 텍스트를 의미합니다. 페이지에 표시되는 이미지를 설명합니다. 주요 용도는 화면 판독기를 사용하는 시각 장애가 있는 사용자를 위한 것입니다.
+
+참고 사항 2개:
+
+. 쉼표와 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 Alt 텍스트를 따옴표로 묶는 것이 좋습니다.
+. 를 클릭합니다 https://docs.asciidoctor.org/asciidoc/latest/macros/images/["AsciiDoctor 문서"^] _block images_는 _two_콜론('image::file.png')과 함께 자체 행에 있어야 한다고 기술하십시오
++
+그러나 위에 표시된 것처럼 한 개의 콜론을 사용하는 것이 좋습니다. 하나의 콜론을 사용하면 동일한 결과가 도출되며 내부 도구에서 더 잘 작동합니다.
+
+
+
+
+
+=== 비디오
+
+YouTube에서 호스팅됨:
+
+....
+video::id[youtube]
+....
+GitHub에서 로컬로 호스팅:
+
+....
+video::file.mp4
+....
+
+
+=== 링크
+
+사용해야 하는 구문은 연결할 내용에 따라 다릅니다.
+
+* <<Link to an external site>>
+* <<Link to a section on the same page>>
+* <<Link to another page in the docs>>
+
+
+
+
+==== 외부 사이트에 대한 링크입니다
+
+....
+url[link text^]
+....
+^는 새 브라우저 탭에서 링크를 엽니다.
+
+
+
+==== 같은 페이지의 섹션에 대한 링크입니다
+
+....
+<<section_title>>
+....
+예를 들면 다음과 같습니다.
+
+....
+For more details, see <<Headings>>.
+....
+링크 텍스트는 섹션 제목 이외의 다른 텍스트가 될 수 있습니다.
+
+....
+<<section_title,Different link text>>
+....
+예를 들면 다음과 같습니다.
+
+....
+<<Headings,Learn the syntax for headings>>.
+....
+
+
+==== 문서의 다른 페이지에 대한 링크입니다
+
+파일이 동일한 GitHub 저장소에 있어야 합니다.
+
+....
+link:<file_name>.html[Link text]
+....
+파일의 섹션에 직접 연결하려면 해시(#)와 섹션의 제목을 추가합니다.
+
+....
+link:<file_name>.html#<section-name-using-dashes-and-all-lower-case>[Link text]
+....
+예를 들면 다음과 같습니다.
+
+....
+link:style.html#use-simple-words[Use simple words]
+....
+
+
+=== 참고, 팁 및 주의
+
+메모, 팁 또는 주의 문구를 사용하여 특정 문장에 주의를 기울여야 할 수 있습니다. 다음과 같이 형식을 지정합니다.
+
+....
+NOTE: text
+
+TIP: text
+
+CAUTION: text
+....
+이러한 각 항목은 조금만 사용하십시오. 노트와 팁이 가득 찬 페이지는 만들지 않아도 됩니다. 그렇게 하면 의미가 떨어집니다.
+
+AsciiiiDoc 콘텐츠를 HTML로 전환할 때 각 내용이 어떻게 보이는지 살펴보겠습니다.
+
+
+NOTE: 이것은 참고입니다. 여기에는 독자가 알아야 할 추가 정보가 포함되어 있습니다.
+
+
+TIP: 팁은 사용자가 무언가를 하거나 무언가를 이해하는 데 도움이 되는 유용한 정보를 제공합니다.
+
+
+CAUTION: 주의할 경우 독자는 신중하게 행동하도록 조언합니다. 이 기능은 드문 경우에 사용합니다.
+
+
+
+== 고급 항목
+
+새 콘텐츠를 작성하는 경우 이 섹션에서 몇 가지 세부적인 내용을 검토할 수 있습니다.
+
+
+
+=== 문서 머리글
+
+각 AsciiDoc 파일에는 두 가지 유형의 헤더가 포함되어 있습니다. 첫 번째는 GitHub를 위한 것이고 두 번째는 AsciiiDoc 콘텐츠를 HTML로 전환하는 게시 도구인 AsciiDoctor를 위한 것입니다.
+
+GitHub 헤더는 .adoc 파일의 첫 번째 콘텐츠 세트입니다. 여기에는 다음이 포함되어야 합니다.
+
+....
+---
+sidebar: sidebar
+permalink: <file_name>.html
+keywords: keyword1, keyword2, keyword3, keyword4, keyword5
+summary: "A summary."
+---
+....
+키워드 및 요약은 검색 결과에 직접 영향을 줍니다. 실제로 검색 결과에 요약 자체가 표시됩니다. 사용자 편의성이 있는지 확인해야 합니다. 모범 사례는 요약 내용이 리드 단락에 반영되도록 하는 것입니다.
+
+
+TIP: 콜론과 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 요약은 따옴표로 묶는 것이 좋습니다.
+
+다음 머리글은 문서 제목 바로 아래에 표시됩니다( 참조) <<Headings>>)를 클릭합니다. 이 헤더에는 다음이 포함되어야 합니다.
+
+....
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+....
+이 머리글의 매개 변수를 터치할 필요는 없습니다. 그냥 붙여넣고 잊어버리면 됩니다.
+
+
+
+=== 리드 단락
+
+문서 제목 아래에 나타나는 첫 번째 단락에는 바로 위에 다음 구문이 포함되어야 합니다.
+
+....
+[.lead]
+This is my lead paragraph for this content.
+....
+[.lead] 뒤에 오는 텍스트와 다른 형식의 CSS 서식을 리드 단락에 적용합니다.
+
+
+
+=== 표
+
+기본 테이블에 대한 구문은 다음과 같습니다.
+
+....
+[cols=2*,options="header",cols="25,75"]
+|===
+| heading column 1
+| heading column 2
+| row 1 column 1 | row 1 column 2
+| row 2 column 1 | row 2 column 2
+|===
+....
+테이블의 서식을 지정하는 방법은 _many_가지가 있습니다. 을 참조하십시오 https://asciidoctor.org/docs/user-manual/#tables["AsciiDoctor 사용 설명서"^] 추가 도움말을 참조하십시오.
+
+
+TIP: 셀에 글머리 기호 목록과 같은 서식이 지정된 콘텐츠가 포함된 경우 열 머리글에 "A"를 추가하여 서식을 지정하는 것이 좋습니다. 예: [cols="2,2,4a" 옵션="header"]
+
+https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables["자세한 표 예제는 AsciiiDoc 구문 빠른 참조 를 참조하십시오"^].
+
+
+
+=== 작업 제목
+
+작업을 수행하는 방법을 설명하는 경우 단계를 시작하기 전에 소개 정보를 포함할 수 있습니다. 단계를 완료한 후 수행해야 할 작업을 말해야 할 수도 있습니다. 이 경우, 스캔을 가능하게 하는 헤더를 사용하여 해당 정보를 구성하는 것이 가장 좋습니다.
+
+필요에 따라 다음 제목을 사용합니다.
+
+_ 사용자가 작업을 완료하는 데 필요한 정보입니다. _
+
+_ 사용자가 이 작업에 대해 알아야 할 일부 추가 컨텍스트 정보입니다. _
+
+_ 작업을 완료하기 위한 개별 단계. _
+
+_ 사용자가 다음에 수행해야 하는 작업. _
+
+각 항목은 을 포함해야 합니다. 텍스트 바로 앞에 다음과 같이 표시됩니다.
+
+....
+.What you'll need
+.About this task
+.Steps
+.What's next?
+....
+이 구문은 큰 글꼴로 굵은 텍스트를 적용합니다.
+
+
+
+=== 명령 구문
+
+명령어 입력 시, 'Monospace 폰트 적용:
+
+....
+`volume show -is-encrypted true`
+....
+다음과 같은 모양이 나타납니다.
+
+볼륨 쇼는 암호화된 사실이다
+
+명령 출력 또는 명령 예는 다음 구문을 사용합니다.
+
+....
+----
+cluster2::> volume show -is-encrypted true
+
+Vserver  Volume  Aggregate  State  Type  Size  Available  Used
+-------  ------  ---------  -----  ----  -----  --------- ----
+vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%
+----
+....
+대시 4개를 사용하면 서로 다른 텍스트 줄을 입력할 수 있습니다. 그 결과는 다음과 같습니다.
+
+[listing]
+----
+cluster2::> volume show -is-encrypted true
+
+Vserver  Volume  Aggregate  State  Type  Size  Available  Used
+-------  ------  ---------  -----  ----  -----  --------- ----
+vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%
+----
+
+
+=== 변수 텍스트
+
+명령 및 명령 출력에서 변수 텍스트를 밑줄로 묶고 기울임꼴을 적용합니다.
+
+....
+`vserver nfs modify -vserver _name_ -showmount enabled`
+....
+이 명령과 변수 텍스트는 다음과 같습니다.
+
+'vserver nfs modify -vserver_name_-showmount enabled'
+
+
+NOTE: 밑줄은 현재 코드 구문 강조 표시로는 지원되지 않습니다.
+
+
+
+=== 코드 구문 강조 표시
+
+코드 구문 강조 표시는 가장 널리 사용되는 언어를 문서화하는 개발자 중심의 솔루션을 제공합니다.
+
+* 출력 예 1 *
+
+[source, http]
+----
+POST https://netapp-cloud-account.auth0.com/oauth/token
+Header: Content-Type: application/json
+Body:
+{
+              "username": "<user_email>",
+              "scope": "profile",
+              "audience": "https://api.cloud.netapp.com",
+              "client_id": "UaVhOIXMWQs5i1WdDxauXe5Mqkb34NJQ",
+              "grant_type": "password",
+              "password": "<user_password>"
+}
+----
+* 출력 예 2 *
+
+[source, json]
+----
+[
+    {
+        "header": {
+            "requestId": "init",
+            "clientId": "init",
+            "agentId": "init"
+        },
+        "payload": {
+            "init": {}
+        },
+        "id": "5801"
+    }
+]
+----
+* 지원되는 언어 *
+
+* Bash
+* 말림
+* HTTPS
+* JSON을 참조하십시오
+* PowerShell을 사용합니다
+* 인형
+* 파이썬
+* YAML
+
+
+* 구현 *
+
+다음 구문을 복사하여 붙여 넣은 다음 지원되는 언어와 코드를 추가합니다.
+
+....
+[source,<language>]
+<code>
+....
+예를 들면 다음과 같습니다.
+
+....
+[source,curl]
+curl -s https:///v1/ \
+-H accept:application/json \
+-H "Content-type: application/json" \
+-H api-key: \
+-H secret-key: \
+-X [GET,POST,PUT,DELETE]
+....
+
+
+=== 컨텐츠 재사용
+
+여러 페이지에 걸쳐 반복되는 콘텐츠 청크가 있는 경우 한 번 손쉽게 작성한 다음 해당 페이지 전체에서 다시 사용할 수 있습니다. 재사용은 동일한 리포지토리 내에서 여러 리포지토리에서 가능합니다. 작동 방식은 다음과 같습니다.
+
+. 리포지터리에 _include라는 이름의 폴더를 만듭니다
++
+https://github.com/NetAppDocs/cloud-tiering["예를 들어, Cloud Tiering 저장소를 살펴보겠습니다"^].
+
+. 다시 사용할 콘텐츠가 포함된 .adoc 파일을 해당 폴더에 추가합니다.
++
+문장, 목록, 표, 하나 이상의 섹션 등이 될 수 있습니다. 파일에 다른 어떤 것도 포함시키지 마십시오. 머리글이나 다른 것은 없습니다.
+
+. 이제 해당 콘텐츠를 다시 사용할 파일로 이동합니다.
+. _Same_GitHub 리포지토리 내에서 콘텐츠를 재사용하는 경우, 한 줄에 다음 구문을 사용합니다.
++
+ include::_include/<filename>.adoc[]
++
+예를 들면 다음과 같습니다.
+
++
+ include::_include/s3regions.adoc[]
+. _different_repository에서 콘텐츠를 재사용하는 경우 한 줄에 다음 구문을 사용합니다.
++
+ include::https://raw.githubusercontent.com/NetAppDocs/<reponame>/main/_include/<filename>.adoc[]
++
+예를 들면 다음과 같습니다.
+
++
+ include::https://raw.githubusercontent.com/NetAppDocs/cloud-tiering/main/_include/s3regions.adoc[]
+
+
+바로 그겁니다!
+
+Include 지시문에 대한 자세한 내용을 보려면 https://asciidoctor.org/docs/user-manual/#include-directive["AsciiDoctor 사용 설명서를 확인하십시오"^].
+
+
+
+=== 링크가 있는 이미지
+
+"단추"처럼 동작하도록 이미지에 링크를 추가할 수 있습니다.
+
+* 출력 예 *
+
+다음 스크린샷에서 "문서 센터에서 보기"는 링크가 포함된 이미지입니다.
+
+image::image_with_link.gif["문서 센터에서 보기"라고 표시된 단추 이미지]
+
+구문 *
+
+이미지를 추가할 때 다음 구문을 사용합니다.
+
+....
+image:<file_name>.<ext>[alt=<text>,link=<url>,window=_blank]
+....
+"window=_blank"는 새 브라우저 탭(또는 창)에서 링크를 엽니다.
+
+예를 들면 다음과 같습니다.
+
+....
+image:btn-view-in-doc-center.png[alt=A button titled View in Documentation Center that links to the NetApp HCI Doc Center,link=http://docs.netapp.com/hci/index.jsp,window=_blank]
+....
