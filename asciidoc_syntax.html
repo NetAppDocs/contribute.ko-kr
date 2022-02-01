@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head class="at-element-marker">
+  <title>AsciiiDoc 참조</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="AsciiiDoc 참조" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html" />
+	<meta property="og:description" content="" />
+  <meta property="og:image" content="https://docs.netapp.com/ko-kr/contribute/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="">
+  <meta name="keywords" content=" ">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ko-kr/contribute/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/contribute/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ko-kr/contribute/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/contribute/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/contribute/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ko-kr/contribute/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ko-kr/contribute/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ko-kr/contribute/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ko-kr/contribute/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ko-kr/contribute/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ko-kr/contribute/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/contribute/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/contribute/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ko-kr/contribute/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ko-kr/contribute/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/ko-kr/contribute/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/ko-kr/contribute/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ko-kr/contribute/js/na-search.js'></script>
+  
+
+  
+  <script src='/ko-kr/contribute/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ko-kr/contribute/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/contribute/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ko-kr/contribute/js/na-utility.js'></script>
+  <script src='/ko-kr/contribute/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/ko-kr/contribute/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ko-kr/contribute/js/toc.js'></script>
+  <script src='/ko-kr/contribute/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/ko-kr/contribute/js/version-dropdown.js'></script>
+  <script src='/ko-kr/contribute/js/product-family.js'></script>
+  <script src='/ko-kr/contribute/js/FileSaver.min.js'></script>
+  <script src='/ko-kr/contribute/js/jszip-utils.min.js'></script>
+  <script src='/ko-kr/contribute/js/jszip.min.js'></script>
+  <script src='/ko-kr/contribute/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">제품 및 솔루션</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">지원 및 교육</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">커뮤니티</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">블로그</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">고객 성공 사례</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">연락처</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">연락처</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ko-kr/contribute/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ko-kr/contribute/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ko-kr/contribute/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ko-kr/contribute/search.html"
+          data-type="widget" 
+          data-placeholder="설명서 검색" 
+          data-no-results-found="{query}에 대한 결과를 찾을 수 없음" 
+          data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
+          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
+          data-results-found="{hitCount}개의 결과를 찾음"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">한국어</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/contribute/asciidoc_syntax.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/contribute/asciidoc_syntax.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/contribute/asciidoc_syntax.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ko-kr/contribute/images/pdf.png" width="16" height="16"/>사용 가능한 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ko-kr/contribute/pdfs/fullsite-sidebar/GitHub에서_NetApp_기술_콘텐츠에_기고하십시오.pdf" >
+          <img src="/ko-kr/contribute/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ko-kr/contribute/pdfs/pages/asciidoc_syntax.pdf" >
+    <img src="/ko-kr/contribute/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ko-kr/contribute/images/pdf-zip.png" width="16" height="16"/>
+      <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/contribute/index.html">
+        콘텐츠 기고
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/contribute/style.html">
+        NetApp 문서의 스타일
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/contribute/asciidoc_syntax.html">
+        AsciiiDoc 참조
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">홈</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">설명서</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ko-kr/contribute/">Contributor's&nbsp;Guide</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          AsciiiDoc 참조
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ko-kr/contribute/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 본 한국어 번역은 사용자 편의를 위해 제공되는 기계 번역입니다. 영어 버전과 한국어 버전이 서로 어긋나는 경우에는 언제나 영어 버전이 우선합니다. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">AsciiiDoc 참조</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-02-01 10:40:44 +0000">02/01/2022</time>
+    
+  
+
+<span>기여자
+  <a target="_blank" href="https://github.com/netapp-bcammett">
+    <img  class="avatar avatar-small"
+          alt="netapp-bcammett"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18287750?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+</p>
+
+
+<div id="toc" class="toc">
+<div id="toctitle">목차</div>
+<ul class="sectlevel1">
+<li><a href="#기본-사항">기본 사항</a>
+<ul class="sectlevel2">
+<li><a href="#제목">제목</a></li>
+<li><a href="#굵은-텍스트">굵은 텍스트</a></li>
+<li><a href="#기울임꼴-텍스트">기울임꼴 텍스트</a></li>
+<li><a href="#글머리-기호-목록">글머리 기호 목록</a></li>
+<li><a href="#라벨이-붙은-목록">라벨이 붙은 목록</a></li>
+<li><a href="#단계">단계</a></li>
+<li><a href="#이미지">이미지</a></li>
+<li><a href="#비디오">비디오</a></li>
+<li><a href="#링크">링크</a></li>
+<li><a href="#참고-팁-및-주의">참고, 팁 및 주의</a></li>
+</ul>
+</li>
+<li><a href="#고급-항목">고급 항목</a>
+<ul class="sectlevel2">
+<li><a href="#문서-머리글">문서 머리글</a></li>
+<li><a href="#리드-단락">리드 단락</a></li>
+<li><a href="#표">표</a></li>
+<li><a href="#작업-제목">작업 제목</a></li>
+<li><a href="#명령-구문">명령 구문</a></li>
+<li><a href="#변수-텍스트">변수 텍스트</a></li>
+<li><a href="#코드-구문-강조-표시">코드 구문 강조 표시</a></li>
+<li><a href="#컨텐츠-재사용">컨텐츠 재사용</a></li>
+<li><a href="#링크가-있는-이미지">링크가 있는 이미지</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>AsciiiDoc는 Markdown과 유사한 간단한 마크업 언어입니다. 표준 Markdown 대신 AsciiiDoc를 선택했습니다. 이 제품은 더 많은 기본 기능을 제공하기 때문입니다. 더 강력하지만 사용도 간편합니다. 아래 섹션을 참조하여 AsciiiDoc에 쓰기를 시작하십시오.</p>
+</div>
+<div class="paragraph">
+<p>를 참조하십시오 <a href="http://asciidoctor.org/docs/user-manual/" target="_blank" rel="noopener">"AsciiDoctor 사용 설명서"</a> 추가 도움말을 참조하십시오.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="기본-사항">기본 사항</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>간단한 문서 업데이트를 위해 몇 가지 사항을 알고 있어야 합니다.</p>
+</div>
+<div class="sect2">
+<h3 id="제목">제목</h3>
+<div class="literalblock">
+<div class="content">
+<pre>= Page title
+== Level 1 section
+=== Level 2 section
+==== Level 3 section
+===== Level 4 section</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>페이지 제목은 하나만 지정할 수 있지만 섹션 제목은 여러 개일 수 있습니다. 예를 들어, 레벨 2 및 레벨 3 섹션이 포함된 레벨 1 섹션 3개가 있을 수 있습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>= Page title
+== Level 1 section
+=== Level 2 section
+== Level 1 section
+== Level 1 section
+=== Level 2 section
+==== Level 3 section</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="굵은-텍스트">굵은 텍스트</h3>
+<div class="literalblock">
+<div class="content">
+<pre>*Text*</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="기울임꼴-텍스트">기울임꼴 텍스트</h3>
+<div class="literalblock">
+<div class="content">
+<pre>_Text_</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="글머리-기호-목록">글머리 기호 목록</h3>
+<div class="literalblock">
+<div class="content">
+<pre>* Item 1
++
+Continuation text for the previous list item.
+
+* Item 2
+** Item 2a
+
+* Item 3</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+는 목록 연속입니다. 이 경우 텍스트가 목록 항목과 인라인 상태로 유지됩니다. 를 생략하면 해당 줄의 서식에 영향을 줍니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="라벨이-붙은-목록">라벨이 붙은 목록</h3>
+<div class="literalblock">
+<div class="content">
+<pre>Item 1::
+Description 1
+
+Item 2::
+Description 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>또는</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[horizontal]
+Item 1::
+Description 1
+
+Item 2::
+Description 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>항목 1 위에 [horizontal](수평)을 추가하면 레이블과 설명이 같은 줄에 나타납니다. 아주 짧은 설명을 할 때 잘 작동합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[수평] * 가 없는 예</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">항목 1</dt>
+<dd>
+<p>설명 1</p>
+</dd>
+<dt class="hdlist1">항목 2</dt>
+<dd>
+<p>설명 2</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>[수평] * 의 예</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">항목 1</dt>
+<dd>
+<p>설명 1</p>
+</dd>
+<dt class="hdlist1">항목 2</dt>
+<dd>
+<p>설명 2</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="단계">단계</h3>
+<div class="literalblock">
+<div class="content">
+<pre>.Steps
+
+. Step 1
+
+. Step 2
++
+Info for step 2
+
+. Step 3
+.. Step 3a
+.. Step 3b
+
+. Step 4</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+는 목록 연속입니다. 이 경우 텍스트가 목록 항목과 인라인 상태로 유지됩니다. 를 생략하면 해당 줄의 서식에 영향을 줍니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="이미지">이미지</h3>
+<div class="literalblock">
+<div class="content">
+<pre>image:file.png["alt text"]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alt text_는 대체 텍스트를 의미합니다. 페이지에 표시되는 이미지를 설명합니다. 주요 용도는 화면 판독기를 사용하는 시각 장애가 있는 사용자를 위한 것입니다.</p>
+</div>
+<div class="paragraph">
+<p>참고 사항 2개:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>쉼표와 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 Alt 텍스트를 따옴표로 묶는 것이 좋습니다.</p>
+</li>
+<li>
+<p>를 클릭합니다 <a href="https://docs.asciidoctor.org/asciidoc/latest/macros/images/" target="_blank" rel="noopener">"AsciiDoctor 문서"</a> _block images_는 _two_콜론('image::file.png')과 함께 자체 행에 있어야 한다고 기술하십시오</p>
+<div class="paragraph">
+<p>그러나 위에 표시된 것처럼 한 개의 콜론을 사용하는 것이 좋습니다. 하나의 콜론을 사용하면 동일한 결과가 도출되며 내부 도구에서 더 잘 작동합니다.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="비디오">비디오</h3>
+<div class="paragraph">
+<p>YouTube에서 호스팅됨:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>video::id[youtube]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>GitHub에서 로컬로 호스팅:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>video::file.mp4</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="링크">링크</h3>
+<div class="paragraph">
+<p>사용해야 하는 구문은 연결할 내용에 따라 다릅니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Link to an external site">[Link to an external site]</a></p>
+</li>
+<li>
+<p><a href="#Link to a section on the same page">[Link to a section on the same page]</a></p>
+</li>
+<li>
+<p><a href="#Link to another page in the docs">[Link to another page in the docs]</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="외부-사이트에-대한-링크입니다">외부 사이트에 대한 링크입니다</h4>
+<div class="literalblock">
+<div class="content">
+<pre>url[link text^]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>^는 새 브라우저 탭에서 링크를 엽니다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="같은-페이지의-섹션에-대한-링크입니다">같은 페이지의 섹션에 대한 링크입니다</h4>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;section_title&gt;&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For more details, see &lt;&lt;Headings&gt;&gt;.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>링크 텍스트는 섹션 제목 이외의 다른 텍스트가 될 수 있습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;section_title,Different link text&gt;&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;Headings,Learn the syntax for headings&gt;&gt;.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="문서의-다른-페이지에-대한-링크입니다">문서의 다른 페이지에 대한 링크입니다</h4>
+<div class="paragraph">
+<p>파일이 동일한 GitHub 저장소에 있어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:&lt;file_name&gt;.html[Link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>파일의 섹션에 직접 연결하려면 해시(#)와 섹션의 제목을 추가합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:&lt;file_name&gt;.html#&lt;section-name-using-dashes-and-all-lower-case&gt;[Link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:style.html#use-simple-words[Use simple words]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="참고-팁-및-주의">참고, 팁 및 주의</h3>
+<div class="paragraph">
+<p>메모, 팁 또는 주의 문구를 사용하여 특정 문장에 주의를 기울여야 할 수 있습니다. 다음과 같이 형식을 지정합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>NOTE: text
+
+TIP: text
+
+CAUTION: text</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이러한 각 항목은 조금만 사용하십시오. 노트와 팁이 가득 찬 페이지는 만들지 않아도 됩니다. 그렇게 하면 의미가 떨어집니다.</p>
+</div>
+<div class="paragraph">
+<p>AsciiiiDoc 콘텐츠를 HTML로 전환할 때 각 내용이 어떻게 보이는지 살펴보겠습니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/note.svg" alt="참고">
+</td>
+<td class="content">
+이것은 참고입니다. 여기에는 독자가 알아야 할 추가 정보가 포함되어 있습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+팁은 사용자가 무언가를 하거나 무언가를 이해하는 데 도움이 되는 유용한 정보를 제공합니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/caution.svg" alt="주의">
+</td>
+<td class="content">
+주의할 경우 독자는 신중하게 행동하도록 조언합니다. 이 기능은 드문 경우에 사용합니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="고급-항목">고급 항목</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>새 콘텐츠를 작성하는 경우 이 섹션에서 몇 가지 세부적인 내용을 검토할 수 있습니다.</p>
+</div>
+<div class="sect2">
+<h3 id="문서-머리글">문서 머리글</h3>
+<div class="paragraph">
+<p>각 AsciiDoc 파일에는 두 가지 유형의 헤더가 포함되어 있습니다. 첫 번째는 GitHub를 위한 것이고 두 번째는 AsciiiDoc 콘텐츠를 HTML로 전환하는 게시 도구인 AsciiDoctor를 위한 것입니다.</p>
+</div>
+<div class="paragraph">
+<p>GitHub 헤더는 .adoc 파일의 첫 번째 콘텐츠 세트입니다. 여기에는 다음이 포함되어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>---
+sidebar: sidebar
+permalink: &lt;file_name&gt;.html
+keywords: keyword1, keyword2, keyword3, keyword4, keyword5
+summary: "A summary."
+---</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>키워드 및 요약은 검색 결과에 직접 영향을 줍니다. 실제로 검색 결과에 요약 자체가 표시됩니다. 사용자 편의성이 있는지 확인해야 합니다. 모범 사례는 요약 내용이 리드 단락에 반영되도록 하는 것입니다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+콜론과 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 요약은 따옴표로 묶는 것이 좋습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>다음 머리글은 문서 제목 바로 아래에 표시됩니다( 참조) <a href="#Headings">[Headings]</a>)를 클릭합니다. 이 헤더에는 다음이 포함되어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이 머리글의 매개 변수를 터치할 필요는 없습니다. 그냥 붙여넣고 잊어버리면 됩니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="리드-단락">리드 단락</h3>
+<div class="paragraph">
+<p>문서 제목 아래에 나타나는 첫 번째 단락에는 바로 위에 다음 구문이 포함되어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[.lead]
+This is my lead paragraph for this content.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>[.lead] 뒤에 오는 텍스트와 다른 형식의 CSS 서식을 리드 단락에 적용합니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="표">표</h3>
+<div class="paragraph">
+<p>기본 테이블에 대한 구문은 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[cols=2*,options="header",cols="25,75"]
+|===
+| heading column 1
+| heading column 2
+| row 1 column 1 | row 1 column 2
+| row 2 column 1 | row 2 column 2
+|===</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>테이블의 서식을 지정하는 방법은 _many_가지가 있습니다. 을 참조하십시오 <a href="https://asciidoctor.org/docs/user-manual/#tables" target="_blank" rel="noopener">"AsciiDoctor 사용 설명서"</a> 추가 도움말을 참조하십시오.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+셀에 글머리 기호 목록과 같은 서식이 지정된 콘텐츠가 포함된 경우 열 머리글에 "A"를 추가하여 서식을 지정하는 것이 좋습니다. 예: [cols="2,2,4a" 옵션="header"]
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables" target="_blank" rel="noopener">"자세한 표 예제는 AsciiiDoc 구문 빠른 참조 를 참조하십시오"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="작업-제목">작업 제목</h3>
+<div class="paragraph">
+<p>작업을 수행하는 방법을 설명하는 경우 단계를 시작하기 전에 소개 정보를 포함할 수 있습니다. 단계를 완료한 후 수행해야 할 작업을 말해야 할 수도 있습니다. 이 경우, 스캔을 가능하게 하는 헤더를 사용하여 해당 정보를 구성하는 것이 가장 좋습니다.</p>
+</div>
+<div class="paragraph">
+<p>필요에 따라 다음 제목을 사용합니다.</p>
+</div>
+<div class="paragraph">
+<p>_ 사용자가 작업을 완료하는 데 필요한 정보입니다. _</p>
+</div>
+<div class="paragraph">
+<p>_ 사용자가 이 작업에 대해 알아야 할 일부 추가 컨텍스트 정보입니다. _</p>
+</div>
+<div class="paragraph">
+<p>_ 작업을 완료하기 위한 개별 단계. _</p>
+</div>
+<div class="paragraph">
+<p>_ 사용자가 다음에 수행해야 하는 작업. _</p>
+</div>
+<div class="paragraph">
+<p>각 항목은 을 포함해야 합니다. 텍스트 바로 앞에 다음과 같이 표시됩니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>.What you'll need
+.About this task
+.Steps
+.What's next?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이 구문은 큰 글꼴로 굵은 텍스트를 적용합니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="명령-구문">명령 구문</h3>
+<div class="paragraph">
+<p>명령어 입력 시, 'Monospace 폰트 적용:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`volume show -is-encrypted true`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>다음과 같은 모양이 나타납니다.</p>
+</div>
+<div class="paragraph">
+<p>볼륨 쇼는 암호화된 사실이다</p>
+</div>
+<div class="paragraph">
+<p>명령 출력 또는 명령 예는 다음 구문을 사용합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>----
+cluster2::&gt; volume show -is-encrypted true
+
+Vserver  Volume  Aggregate  State  Type  Size  Available  Used
+-------  ------  ---------  -----  ----  -----  --------- ----
+vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%
+----</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>대시 4개를 사용하면 서로 다른 텍스트 줄을 입력할 수 있습니다. 그 결과는 다음과 같습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster2::&gt; volume show -is-encrypted true
+
+Vserver  Volume  Aggregate  State  Type  Size  Available  Used
+-------  ------  ---------  -----  ----  -----  --------- ----
+vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="변수-텍스트">변수 텍스트</h3>
+<div class="paragraph">
+<p>명령 및 명령 출력에서 변수 텍스트를 밑줄로 묶고 기울임꼴을 적용합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`vserver nfs modify -vserver _name_ -showmount enabled`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이 명령과 변수 텍스트는 다음과 같습니다.</p>
+</div>
+<div class="paragraph">
+<p>'vserver nfs modify -vserver_name_-showmount enabled'</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/note.svg" alt="참고">
+</td>
+<td class="content">
+밑줄은 현재 코드 구문 강조 표시로는 지원되지 않습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="코드-구문-강조-표시">코드 구문 강조 표시</h3>
+<div class="paragraph">
+<p>코드 구문 강조 표시는 가장 널리 사용되는 언어를 문서화하는 개발자 중심의 솔루션을 제공합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>출력 예 1 *</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-http" data-lang="http">POST https://netapp-cloud-account.auth0.com/oauth/token
+Header: Content-Type: application/json
+Body:
+{
+              "username": "&lt;user_email&gt;",
+              "scope": "profile",
+              "audience": "https://api.cloud.netapp.com",
+              "client_id": "UaVhOIXMWQs5i1WdDxauXe5Mqkb34NJQ",
+              "grant_type": "password",
+              "password": "&lt;user_password&gt;"
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>출력 예 2 *</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">[
+    {
+        "header": {
+            "requestId": "init",
+            "clientId": "init",
+            "agentId": "init"
+        },
+        "payload": {
+            "init": {}
+        },
+        "id": "5801"
+    }
+]</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>지원되는 언어 *</p>
+</li>
+<li>
+<p>Bash</p>
+</li>
+<li>
+<p>말림</p>
+</li>
+<li>
+<p>HTTPS</p>
+</li>
+<li>
+<p>JSON을 참조하십시오</p>
+</li>
+<li>
+<p>PowerShell을 사용합니다</p>
+</li>
+<li>
+<p>인형</p>
+</li>
+<li>
+<p>파이썬</p>
+</li>
+<li>
+<p>YAML</p>
+</li>
+<li>
+<p>구현 *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>다음 구문을 복사하여 붙여 넣은 다음 지원되는 언어와 코드를 추가합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[source,&lt;language&gt;]
+&lt;code&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[source,curl]
+curl -s https:///v1/ \
+-H accept:application/json \
+-H "Content-type: application/json" \
+-H api-key: \
+-H secret-key: \
+-X [GET,POST,PUT,DELETE]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="컨텐츠-재사용">컨텐츠 재사용</h3>
+<div class="paragraph">
+<p>여러 페이지에 걸쳐 반복되는 콘텐츠 청크가 있는 경우 한 번 손쉽게 작성한 다음 해당 페이지 전체에서 다시 사용할 수 있습니다. 재사용은 동일한 리포지토리 내에서 여러 리포지토리에서 가능합니다. 작동 방식은 다음과 같습니다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>리포지터리에 _include라는 이름의 폴더를 만듭니다</p>
+<div class="paragraph">
+<p><a href="https://github.com/NetAppDocs/cloud-tiering" target="_blank" rel="noopener">"예를 들어, Cloud Tiering 저장소를 살펴보겠습니다"</a>.</p>
+</div>
+</li>
+<li>
+<p>다시 사용할 콘텐츠가 포함된 .adoc 파일을 해당 폴더에 추가합니다.</p>
+<div class="paragraph">
+<p>문장, 목록, 표, 하나 이상의 섹션 등이 될 수 있습니다. 파일에 다른 어떤 것도 포함시키지 마십시오. 머리글이나 다른 것은 없습니다.</p>
+</div>
+</li>
+<li>
+<p>이제 해당 콘텐츠를 다시 사용할 파일로 이동합니다.</p>
+</li>
+<li>
+<p>_Same_GitHub 리포지토리 내에서 콘텐츠를 재사용하는 경우, 한 줄에 다음 구문을 사용합니다.</p>
+<div class="literalblock">
+<div class="content">
+<pre>include::_include/&lt;filename&gt;.adoc[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> include::_include/s3regions.adoc[]
+. _different_repository에서 콘텐츠를 재사용하는 경우 한 줄에 다음 구문을 사용합니다.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>include::https://raw.githubusercontent.com/NetAppDocs/&lt;reponame&gt;/main/_include/&lt;filename&gt;.adoc[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>include::https://raw.githubusercontent.com/NetAppDocs/cloud-tiering/main/_include/s3regions.adoc[]</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>바로 그겁니다!</p>
+</div>
+<div class="paragraph">
+<p>Include 지시문에 대한 자세한 내용을 보려면 <a href="https://asciidoctor.org/docs/user-manual/#include-directive" target="_blank" rel="noopener">"AsciiDoctor 사용 설명서를 확인하십시오"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="링크가-있는-이미지">링크가 있는 이미지</h3>
+<div class="paragraph">
+<p>"단추"처럼 동작하도록 이미지에 링크를 추가할 수 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>출력 예 *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>다음 스크린샷에서 "문서 센터에서 보기"는 링크가 포함된 이미지입니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/image_with_link.gif" alt="문서 센터에서 보기" width="라고 표시된 단추 이미지">
+</div>
+</div>
+<div class="paragraph">
+<p>구문 *</p>
+</div>
+<div class="paragraph">
+<p>이미지를 추가할 때 다음 구문을 사용합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>image:&lt;file_name&gt;.&lt;ext&gt;[alt=&lt;text&gt;,link=&lt;url&gt;,window=_blank]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>"window=_blank"는 새 브라우저 탭(또는 창)에서 링크를 엽니다.</p>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>image:btn-view-in-doc-center.png[alt=A button titled View in Documentation Center that links to the NetApp HCI Doc Center,link=http://docs.netapp.com/hci/index.jsp,window=_blank]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/contribute/issues/new?body=Page%3A%20[AsciiiDoc 참조](https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/contribute/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/contribute/blob/main/asciidoc_syntax.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/contribute/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link" style="visibility: hidden;" ><img src="/ko-kr/contribute/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">이 페이지의 내용</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/contribute/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">웹 사이트에 대한 피드백이 있으십니까?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">의견을 공유해 주십시오</a>
+  <a href="https://docs.netapp.com/ko-kr/announcements/" class="n-footer__copyright">공지 사항</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ko-kr/contribute/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ko-kr/contribute/js/prism.js'></script>
+      <script type="text/javascript" src='/ko-kr/contribute/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ko-kr/contribute/js/www-ntap.js'></script>
+    <script src='/ko-kr/contribute/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
