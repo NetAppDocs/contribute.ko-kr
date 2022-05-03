@@ -5,6 +5,7 @@ permalink: index.html
 = GitHub에서 NetApp 기술 콘텐츠에 기고하십시오
 :toc: macro
 :hardbreaks:
+:allow-uri-read: 
 :toc: 
 :nofooter: 
 :icons: font
