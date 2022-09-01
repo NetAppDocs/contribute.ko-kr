@@ -173,9 +173,9 @@ video::file.mp4
 
 사용해야 하는 구문은 연결할 내용에 따라 다릅니다.
 
-* <<Link to an external site>>
-* <<Link to a section on the same page>>
-* <<Link to another page in the docs>>
+*  to an external site
+*  to a section on the same page
+*  to another page in the docs
 
 
 
@@ -281,7 +281,7 @@ summary: "A summary."
 
 TIP: 콜론과 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 요약은 따옴표로 묶는 것이 좋습니다.
 
-다음 머리글은 문서 제목 바로 아래에 표시됩니다( 참조) <<Headings>>)를 클릭합니다. 이 헤더에는 다음이 포함되어야 합니다.
+다음 머리글은 문서 제목 바로 아래에 표시됩니다( 참조) )를 클릭합니다. 이 헤더에는 다음이 포함되어야 합니다.
 
 ....
 :hardbreaks:
