@@ -509,30 +509,3 @@ https://github.com/NetAppDocs/cloud-tiering["예를 들어, Cloud Tiering 저장
 바로 그겁니다!
 
 Include 지시문에 대한 자세한 내용을 보려면 https://asciidoctor.org/docs/user-manual/#include-directive["AsciiDoctor 사용 설명서를 확인하십시오"^].
-
-
-
-=== 링크가 있는 이미지
-
-"단추"처럼 동작하도록 이미지에 링크를 추가할 수 있습니다.
-
-* 출력 예 *
-
-다음 스크린샷에서 "문서 센터에서 보기"는 링크가 포함된 이미지입니다.
-
-image::image_with_link.gif["문서 센터에서 보기"라고 표시된 단추 이미지]
-
-구문 *
-
-이미지를 추가할 때 다음 구문을 사용합니다.
-
-....
-image:<file_name>.<ext>[alt=<text>,link=<url>,window=_blank]
-....
-"window=_blank"는 새 브라우저 탭(또는 창)에서 링크를 엽니다.
-
-예를 들면 다음과 같습니다.
-
-....
-image:btn-view-in-doc-center.png[alt=A button titled View in Documentation Center that links to the NetApp HCI Doc Center,link=http://docs.netapp.com/hci/index.jsp,window=_blank]
-....
