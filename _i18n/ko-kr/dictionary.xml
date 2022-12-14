@@ -195,14 +195,6 @@
   <block id="95765c2dfda7d084715936053f502991" category="paragraph">바로 그겁니다!</block>
   <block id="514e377a927694fc176e85fdf041aca4" category="inline-link">AsciiDoctor 사용 설명서를 확인하십시오</block>
   <block id="26c37afe99559e49b8e1997dc66b06a4" category="paragraph">Include 지시문에 대한 자세한 내용을 보려면<block ref="3614cbd0aad04b2c40fced01c250f6c0" category="inline-link-rx"></block>.</block>
-  <block id="5a475e4efa7b8ddf2d6321000dc8cbba" category="section-title">링크가 있는 이미지</block>
-  <block id="12cefe5430e1589c2511b55bc8ab45d6" category="paragraph">"단추"처럼 동작하도록 이미지에 링크를 추가할 수 있습니다.</block>
-  <block id="5c58eb07dae698bdbd546d0e3ee7a618" category="paragraph">* 출력 예 *</block>
-  <block id="74cd97b5776c170bc107c0ef3fa1f43f" category="paragraph">다음 스크린샷에서 "문서 센터에서 보기"는 링크가 포함된 이미지입니다.</block>
-  <block id="a92a4dce2a7a1ef62836f3c525107ff5" category="image-alt">"문서 센터에서 보기"라고 표시된 단추 이미지</block>
-  <block id="5622b64e835ffe9267d8000cea15b529" category="paragraph">구문 *</block>
-  <block id="dc2f84b1e0863d2edcde8848baa4ae90" category="paragraph">이미지를 추가할 때 다음 구문을 사용합니다.</block>
-  <block id="5b09c2bf3bfcd66efa7232ef81a3b929" category="paragraph">"window=_blank"는 새 브라우저 탭(또는 창)에서 링크를 엽니다.</block>
   <block id="e2d0dae9d76032e451e39d8e99304566" category="paragraph">우리의 스타일은 대화적이고 공감적이지만, 우리는 전문가답게 대화를 나누며 요점을 얻습니다. NetApp 문서의 콘텐츠를 작성할 때 다음 지침을 따르십시오.</block>
   <block id="99cadf0b9e522abf385884bbba7ba292" category="section-title">대화식으로 쓰기</block>
   <block id="a50fac6c5f3dd2cb4730087ea54252bf" category="paragraph">전문 동료에게 무언가를 설명할 때 말하는 것처럼 쓰십시오. 대화 어조로 글을 작성하면 청중과 소통할 수 있습니다.</block>
@@ -496,4 +488,8 @@
   <block id="36da226eb3fe17950978138e8ad49367" category="paragraph">예를 들어, 볼륨을 생성하는 단계는 완전한 목표가 아니므로 워크플로가 아닙니다. ESX Server에서 스토리지를 사용할 수 있도록 하는 단계는 워크플로우일 수 있습니다. 이 단계에는 볼륨 만들기는 물론 볼륨 내보내기, 필요한 사용 권한 설정, 네트워크 인터페이스 만들기 등이 포함됩니다. 워크플로우가 고객 사용 사례에서 파생됩니다. 워크플로는 목표 달성을 위한 최상의 방법을 하나만 표시합니다.</block>
   <block id="f0e4224652765b139f46a83b11feccc3" category="sidebar">콘텐츠 기고</block>
   <block id="10d4522e6465e87db3593c69181bea32" category="sidebar">NetApp 문서의 스타일</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">다음 단계</block>
+  <block id="7acb8defb656ebd5f9decf15c05926ca" category="paragraph-title">모두 끝냈군요</block>
 </blocks>
