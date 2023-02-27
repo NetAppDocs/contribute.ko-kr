@@ -15,3 +15,7 @@ sidebar:
     url: "/style.html"
   - title: AsciiiDoc 참조
     url: "/asciidoc_syntax.html"
+  - title: AI로 생성된 콘텐츠에 대한 정책
+    url: "/ai-policy.html"
+  - title: 법적 고지
+    url: "/legal-notices.html"
