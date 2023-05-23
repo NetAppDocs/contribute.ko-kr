@@ -17,7 +17,7 @@ permalink: asciidoc_syntax.html
 [role="lead"]
 AsciiiDoc는 Markdown과 유사한 간단한 마크업 언어입니다. 표준 Markdown 대신 AsciiiDoc를 선택했습니다. 이 제품은 더 많은 기본 기능을 제공하기 때문입니다. 더 강력하지만 사용도 간편합니다. 아래 섹션을 참조하여 AsciiiDoc에 쓰기를 시작하십시오.
 
-를 참조하십시오 http://asciidoctor.org/docs/user-manual/["AsciiDoctor 사용 설명서"^] 추가 도움말을 참조하십시오.
+를 참조하십시오 http://["AsciiDoctor 사용 설명서"^] 추가 도움말을 참조하십시오.
 
 
 
@@ -147,7 +147,7 @@ alt text_는 대체 텍스트를 의미합니다. 페이지에 표시되는 이�
 참고 사항 2개:
 
 . 쉼표와 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 Alt 텍스트를 따옴표로 묶는 것이 좋습니다.
-. 를 클릭합니다 https://docs.asciidoctor.org/asciidoc/latest/macros/images/["AsciiDoctor 문서"^] _block images_는 _two_콜론('image::file.png')과 함께 자체 행에 있어야 한다고 기술하십시오
+. 를 클릭합니다 https://["AsciiDoctor 문서"^] _block images_는 _two_콜론('image::file.png')과 함께 자체 행에 있어야 한다고 기술하십시오
 +
 그러나 위에 표시된 것처럼 한 개의 콜론을 사용하는 것이 좋습니다. 하나의 콜론을 사용하면 동일한 결과가 도출되며 내부 도구에서 더 잘 작동합니다.
 
@@ -319,12 +319,12 @@ This is my lead paragraph for this content.
 | row 2 column 1 | row 2 column 2
 |===
 ....
-테이블의 서식을 지정하는 방법은 _many_가지가 있습니다. 을 참조하십시오 https://asciidoctor.org/docs/user-manual/#tables["AsciiDoctor 사용 설명서"^] 추가 도움말을 참조하십시오.
+테이블의 서식을 지정하는 방법은 _many_가지가 있습니다. 을 참조하십시오 https://["AsciiDoctor 사용 설명서"^] 추가 도움말을 참조하십시오.
 
 
 TIP: 셀에 글머리 기호 목록과 같은 서식이 지정된 콘텐츠가 포함된 경우 열 머리글에 "A"를 추가하여 서식을 지정하는 것이 좋습니다. 예: [cols="2,2,4a" 옵션="header"]
 
-https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables["자세한 표 예제는 AsciiiDoc 구문 빠른 참조 를 참조하십시오"^].
+https://["자세한 표 예제는 AsciiiDoc 구문 빠른 참조 를 참조하십시오"^].
 
 
 
@@ -485,7 +485,7 @@ curl -s https:///v1/ \
 
 . 리포지터리에 _include라는 이름의 폴더를 만듭니다
 +
-https://github.com/NetAppDocs/cloud-tiering["예를 들어, Cloud Tiering 저장소를 살펴보겠습니다"^].
+https://["예를 들어, Cloud Tiering 저장소를 살펴보겠습니다"^].
 
 . 다시 사용할 콘텐츠가 포함된 .adoc 파일을 해당 폴더에 추가합니다.
 +
@@ -512,4 +512,4 @@ https://github.com/NetAppDocs/cloud-tiering["예를 들어, Cloud Tiering 저장
 
 바로 그겁니다!
 
-Include 지시문에 대한 자세한 내용을 보려면 https://asciidoctor.org/docs/user-manual/#include-directive["AsciiDoctor 사용 설명서를 확인하십시오"^].
+Include 지시문에 대한 자세한 내용을 보려면 https://["AsciiDoctor 사용 설명서를 확인하십시오"^].

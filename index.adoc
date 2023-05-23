@@ -48,9 +48,9 @@ video::0A-xQJaDkco[youtube,width=848,height=480]
 TIP: 제공한 모든 의견은 공개적으로 표시됩니다. GitHub repo에서 문제를 탐색하는 모든 사용자는 자신의 의견을 볼 수 있습니다.
 
 .단계
-. GitHub 계정이 없는 경우 https://github.com/join["github.com 에서 하나를 만듭니다"^].
+. GitHub 계정이 없는 경우 https://["github.com 에서 하나를 만듭니다"^].
 . GitHub 계정에 로그인합니다.
-. 웹 브라우저를 사용하여 에서 페이지를 엽니다 https://docs.netapp.com["docs.netapp.com"] 이는 피드백과 관련이 있습니다.
+. 웹 브라우저를 사용하여 에서 페이지를 엽니다 https://["docs.netapp.com"] 이는 피드백과 관련이 있습니다.
 . 페이지 오른쪽에서 * 문서 변경 요청 * 을 클릭합니다.
 +
 image:screenshot-request-doc-changes.png["문서 변경 요청"]
@@ -90,9 +90,9 @@ image:screenshot-issues.png["문제 탭"]
 
 
 .단계
-. GitHub 계정이 없는 경우 https://github.com/join["github.com 에서 하나를 만듭니다"^].
+. GitHub 계정이 없는 경우 https://["github.com 에서 하나를 만듭니다"^].
 . GitHub 계정에 로그인합니다.
-. 웹 브라우저를 사용하여 에서 페이지를 엽니다 https://docs.netapp.com["docs.netapp.com"] 편집할 수 있습니다.
+. 웹 브라우저를 사용하여 에서 페이지를 엽니다 https://["docs.netapp.com"] 편집할 수 있습니다.
 . 페이지 오른쪽에서 * 이 페이지 편집 * 을 클릭합니다.
 +
 image:screenshot-edit-this-page.png["이 페이지를 편집합니다"]

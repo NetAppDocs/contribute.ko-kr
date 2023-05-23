@@ -108,8 +108,8 @@ NetApp 제품의 콘텐츠를 만들 때 성능 저하, 인종주의, 현증 또
 대부분의 사람들은 시각적 학습자를 나타냅니다. 비디오, 다이어그램 및 스크린샷을 사용하여 학습 개선 시각 자료는 텍스트 블록을 분할하는 데도 도움이 됩니다.
 
 .예
-* https://docs.netapp.com/us-en/occm/concept_accounts_aws.html["예 #1"^]
-* https://docs.netapp.com/us-en/occm/task_getting_started_azure.html["예 #2"^]
+* https://["예 #1"^]
+* https://["예 #2"^]
 
 
 도 참조하십시오 <<그래픽>>.
@@ -121,8 +121,8 @@ NetApp 제품의 콘텐츠를 만들 때 성능 저하, 인종주의, 현증 또
 제목, 목록 및 표를 사용하면 사용자가 원하는 항목을 검색할 수 있습니다.
 
 .예
-* https://docs.netapp.com/us-en/cloud_volumes/aws/task_activating_support_entitlement.html["예 #1"^]
-* https://docs.netapp.com/us-en/cloud_volumes/aws/reference_selecting_service_level_and_quota.html["예 #2"^]
+* https://["예 #1"^]
+* https://["예 #2"^]
 
 
 
@@ -132,8 +132,8 @@ NetApp 제품의 콘텐츠를 만들 때 성능 저하, 인종주의, 현증 또
 일련의 작업을 완료하는 방법을 설명하는 경우 개념 및 참조 기반 정보를 포함하여 일련의 섹션에 모든 작업을 한 페이지에 배치합니다. 페이지를 너무 많이 클릭해야 하는 여러 개의 미니 페이지로 나누지 마십시오. 동시에 길고 위협적인 페이지를 만들지 마십시오. 페이지가 너무 긴 경우 최선의 판단력을 발휘하여 결정합니다.
 
 .예
-* https://docs.netapp.com/us-en/cloud_volumes/aws/task_activating_support_entitlement.html["예 #1"^]
-* https://docs.netapp.com/us-en/occm/concept_ha.html["예 #2"^]
+* https://["예 #1"^]
+* https://["예 #2"^]
 
 
 
@@ -200,9 +200,9 @@ NetApp 제품의 콘텐츠를 만들 때 성능 저하, 인종주의, 현증 또
 
 추가 동사 규칙은 다음을 참조하십시오.
 
-* https://docs.microsoft.com/en-us/style-guide/welcome/["Microsoft 작성 스타일 가이드"^]
-* https://www.chicagomanualofstyle.org/home.html["시카고 스타일 설명서"^]
-* https://www.merriam-webster.com/["메리암 - 웹스터 사전 온라인"^]
+* https://["Microsoft 작성 스타일 가이드"^]
+* https://["시카고 스타일 설명서"^]
+* https://["메리암 - 웹스터 사전 온라인"^]
 
 
 
@@ -375,9 +375,9 @@ NetApp 제품의 콘텐츠를 만들 때 성능 저하, 인종주의, 현증 또
 
 달리 명시된 경우를 제외하고 다음에 설명된 문법, 문장 부호 및 맞춤법 규칙을 따릅니다.
 
-* https://docs.microsoft.com/en-us/style-guide/welcome/["Microsoft 작성 스타일 가이드"^]
-* https://www.chicagomanualofstyle.org/home.html["시카고 스타일 설명서"^]
-* https://www.merriam-webster.com/["메리암 - 웹스터 사전 온라인"^]
+* https://["Microsoft 작성 스타일 가이드"^]
+* https://["시카고 스타일 설명서"^]
+* https://["메리암 - 웹스터 사전 온라인"^]
 
 
 
@@ -494,8 +494,8 @@ NetApp 제품의 콘텐츠를 만들 때 성능 저하, 인종주의, 현증 또
 * 문장에 10보다 작은 숫자와 10보다 큰 숫자가 혼합되어 있는 경우 모든 숫자에 아라비아 숫자를 사용합니다.
 * 추가 숫자 표기 규칙은 다음을 참조하십시오.
 +
-** https://docs.microsoft.com/en-us/style-guide/welcome/["Microsoft 작성 스타일 가이드"^]
-** https://www.chicagomanualofstyle.org/home.html["시카고 스타일 설명서"^]
+** https://["Microsoft 작성 스타일 가이드"^]
+** https://["시카고 스타일 설명서"^]
 
 
 
@@ -548,9 +548,9 @@ NetApp 제품과 NetApp 제품의 상호 작용 및 타사 제품을 문서화�
 * 세미콜론과 콜론의 사용을 제한합니다.
 * 달리 명시된 경우를 제외하고 다음에 설명된 문법, 문장 부호 및 맞춤법 규칙을 따릅니다.
 +
-** https://docs.microsoft.com/en-us/style-guide/welcome/["Microsoft 작성 스타일 가이드"^]
-** https://www.chicagomanualofstyle.org/home.html["시카고 스타일 설명서"^]
-** https://www.merriam-webster.com/["메리암 - 웹스터 사전 온라인"^]
+** https://["Microsoft 작성 스타일 가이드"^]
+** https://["시카고 스타일 설명서"^]
+** https://["메리암 - 웹스터 사전 온라인"^]
 
 
 
@@ -567,9 +567,9 @@ NetApp 제품과 NetApp 제품의 상호 작용 및 타사 제품을 문서화�
 
 달리 명시된 경우를 제외하고 다음에 설명된 문법, 문장 부호 및 맞춤법 규칙을 따릅니다.
 
-* https://docs.microsoft.com/en-us/style-guide/welcome/["Microsoft 작성 스타일 가이드"^]
-* https://www.chicagomanualofstyle.org/home.html["시카고 스타일 설명서"^]
-* https://www.merriam-webster.com/["메리암 - 웹스터 사전 온라인"^]
+* https://["Microsoft 작성 스타일 가이드"^]
+* https://["시카고 스타일 설명서"^]
+* https://["메리암 - 웹스터 사전 온라인"^]
 
 
 
@@ -594,7 +594,7 @@ NetApp 제품과 NetApp 제품의 상호 작용 및 타사 제품을 문서화�
 
 === 상표
 
-당사 템플릿에 포함된 법적 진술이 충분하기 때문에 대부분의 기술 콘텐츠에는 상표 기호를 포함하지 않습니다. 그러나 을 사용할 때는 모든 사용 규칙을 따릅니다 https://www.netapp.com/us/legal/netapptmlist.aspx["NetApp 상표 용어"^]:
+당사 템플릿에 포함된 법적 진술이 충분하기 때문에 대부분의 기술 콘텐츠에는 상표 기호를 포함하지 않습니다. 그러나 을 사용할 때는 모든 사용 규칙을 따릅니다 https://["NetApp 상표 용어"^]:
 
 * 상표 용어(기호 포함 또는 제외)는 명사, 동사 또는 자세한 말로 사용할 수 없으며 형용사로만 사용하십시오.
 * 상표 용어를 축약하거나 하이픈을 넣거나 기울임꼴로 표시하지 마십시오.
