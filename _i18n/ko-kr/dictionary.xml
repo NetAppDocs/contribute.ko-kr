@@ -505,4 +505,12 @@
   <block id="2518fdb0845f92d5d9fe4aca9f03f286" category="list-text">모든 직원, 계약업체 및 파트너는 이 정책을 준수해야 합니다. 반복적으로 위반하면 제작 권한이 일시 중단될 수 있습니다.</block>
   <block id="ce9532327a3742b7a0020c494ee0ef96" category="list-text">Microsoft 365 공동 파일럿과 같은 소프트웨어를 포함하여 업무용 컴퓨터에 설치된 소프트웨어에 포함된 모든 AI 기반 콘텐츠 생성 기술은 보조 기술을 호스팅하는 회사에 데이터를 전송합니다. 공개되지 않은 제품 기능에 대한 사양을 포함하나 이에 국한되지 않는 회사 기밀 콘텐츠가 포함된 이러한 기술을 표시하지 마십시오.</block>
   <block id="a82c75ffafc08b7d85426b8da8626a7a" category="list-text">공개 AI 기술을 사용하여 **이전 미출시** 제품, 제품 버전 또는 제품 내 기능에 대한 기술 문서를 생성하거나 편집하지 마십시오.</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
 </blocks>
