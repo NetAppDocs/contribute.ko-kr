@@ -32,7 +32,6 @@
   <block id="f8bf3ad3550f95af891e242fcfff7b8a" category="inline-link">docs.netapp.com</block>
   <block id="8a4e27c18032ec0b6639a19d635d31e4" category="list-text">웹 브라우저를 사용하여 에서 페이지를 엽니다<block ref="09765d13a2c7e990410fb33027d9cebd" category="inline-link-rx"></block> 이는 피드백과 관련이 있습니다.</block>
   <block id="58d1e1d3dad3ec015e2540b3713ef488" category="paragraph"><block ref="58d1e1d3dad3ec015e2540b3713ef488" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="da894d315c3a28edc86e627db54669ca" category="paragraph">문서 팀에 세부 정보를 제공하는 데 사용할 수 있는 양식이 있는 새 브라우저 탭이 열립니다.</block>
   <block id="f6e56229ccb769a21a8ee36c8ce1097b" category="inline-image-macro">새 문제를 제출합니다</block>
   <block id="947e4b9915f7e5c398e8dbce136bcf89" category="paragraph"><block ref="947e4b9915f7e5c398e8dbce136bcf89" category="inline-image-macro-rx" type="image"></block></block>
   <block id="95aee4fc901facb0b53ed386f6ba53da" category="paragraph">문제를 열면 GitHub 설명을 통해 공동 작업이 가능합니다. GitHub 계정 설정에 지정된 기본 설정에 따라 이메일 알림이 전송됩니다.</block>
@@ -443,7 +442,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="97dd767bd76bea2996ce155f6fded935" category="list-text">일반적인 피드백을 제출하거나 콘텐츠에 대한 질문을 하려면 * 문서 변경 요청 * 을 선택합니다. 그런 다음 NetApp 콘텐츠 리드가 요청을 검토하여 문서에 어떤 변경이 필요한지 결정합니다. 가장 일반적인 옵션입니다.</block>
   <block id="52b3d02fd2caf09c367f6a8e47835fc2" category="list-text">내용을 직접 편집하려면 * 이 페이지 편집 * 을 선택하십시오. 그런 다음 NetApp 콘텐츠 리드가 편집 내용을 검토하고 병합을 수행합니다.</block>
-  <block id="c9dfb8a3cf2c4d02f86adae4807900dc" category="paragraph">다음 비디오에서는 이 두 가지 옵션에 대해 간략하게 설명합니다.</block>
   <block id="3cafc4d2380a4f8525dcaa0a65259e21" category="video-title">docs.netapp.com 기여 개요</block>
   <block id="626ac697ef02a0c6709fb546054d122b" category="paragraph">아래 섹션에서는 단계별 지침을 제공합니다.</block>
   <block id="07c96edbc201979283e816b9981511ba" category="list-text">GitHub 계정이 없는 경우<block ref="23432af0d50ca18ea33f0fbce4450214" category="inline-link-rx"></block></block>
@@ -513,4 +511,7 @@
   <block id="bd62ac2d873965d23f9623cfb0176399" category="paragraph">UI 요소의 이름을 지정해야 하는 세분화 수준으로 문서화하지 마십시오. 인터페이스에 의존하여 상호작용의 세부 사항을 사용자에게 안내합니다. 특정 이름을 지정해야 하는 경우 요소의 레이블 이름을 지정합니다. 예: "원하는 볼륨 선택" 또는 "기존 볼륨 사용"을 선택합니다. 메뉴나 라디오 버튼 또는 확인란에 이름을 지정할 필요가 없으며 레이블만 사용하십시오.</block>
   <block id="bf9c7e854a6c302d5349d2128c75933d" category="paragraph">사용자가 선택해야 하는 아이콘의 경우 아이콘 이미지를 사용합니다. 이름을 지정하려고 하지 마십시오. 이 규칙은 화살표, 연필, 기어, kabob, hamburger, 등.</block>
   <block id="3d053f543ceb20e8d9a54ccac1275a6f" category="paragraph">간헐적인 화면 캡처("스크린샷")를 통해 사용자는 워크플로 중에 인터페이스를 시작하거나 변경할 때 인터페이스에서 올바른 위치에 있다는 확신을 가질 수 있습니다. 입력할 데이터 또는 선택할 값을 표시하기 위해 화면 캡처를 사용하지 마십시오.</block>
+  <block id="aa475deb1febd97e43051f4cd6e0e03c" category="paragraph">다음 비디오에서는 이 두 가지 옵션에 대해 간략하게 설명합니다.</block>
+  <block id="d2a6bdb03847dd26c195e27066ccdb58" category="paragraph">새 브라우저 탭이 열리고 GitHub 양식이 표시되며 이 양식을 사용하여 문서 팀에 세부 정보를 제공할 수 있습니다.</block>
+  <block id="60a186f1a1bf3949fd214cb8c41bc66f" category="paragraph">새 브라우저 탭이 열리고 문서 사이트의 GitHub 저장소에 있는 파일로 이동합니다.</block>
 </blocks>
