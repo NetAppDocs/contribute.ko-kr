@@ -423,7 +423,6 @@
   <block id="e29016dcbdfa079e649a759e6f2c7d73" category="paragraph">모든 NetAppDocs 참가자는 다음 정책을 준수해야 합니다.</block>
   <block id="3d2f76e77fa66405170b95a4e6d0f881" category="paragraph">NetApp Docs 참가자는 다음을 염두에 두어야 합니다.</block>
   <block id="3c00452e7eb4795d729c810a473fcbc2" category="list-text">새로운 기술 문서에 대한 저작권은 NetApp에 있으며 공식 제품 릴리즈 날짜 이전에 NetApp 외부의 AIS와 관련 기술 문서의 발행에 포함되지 않습니다.</block>
-  <block id="18505b4ed014b3cae05d2642d6a750e6" category="list-text">URL을 포함하여 2021년 이후에 작성된 기밀 문서, 새 콘텐츠 또는 콘텐츠를 AI(ChatGPT 또는 기타 툴)로 보내지 마십시오. ChatGPT에 공급되는 모든 정보는 교육 데이터 세트의 일부가 되며, 이 데이터 세트는 OpenAI의 자산이 되고 이를 통해 사용자와 해당 사용자가 사용할 수 있습니다. 이러한 데이터의 대부분은 공개적으로 액세스할 수 있지만, 우리는 자사 IP를 통해 모델을 교육하고 싶지 않습니다.</block>
   <block id="e7f17e2b8d75868f6d36f8f96798dd35" category="doc">NetApp 기술 문서에 AI 생성 콘텐츠가 사용되는 것을 금지하는 정책</block>
   <block id="a324d52fee121cff0e9755f81464427a" category="sidebar">AI로 생성된 콘텐츠에 대한 정책</block>
   <block id="dd422ba3c99d889e5d57d1570abcaacc" category="paragraph">NetApp은 고객을 위해 정확하고 연관성이 있으며 유용한 기술 문서를 작성, 게시, 유지 관리하는 데 있어 직원, 계약업체 및 파트너의 전문성을 매우 중요하게 생각합니다. NetApp은 AI에서 생성된 콘텐츠를 사용할 경우 이러한 가치가 훼손되고 문서의 무결성과 정확성이 떨어질 수 있다고 생각합니다. 따라서 NetApp의 정책은 사람이 확인 및 검증하지 않은 AI 생성 콘텐츠의 게시를 금지하는 것입니다. 이 내용은 docs.netapp.com 게시된 모든 기술 문서에 적용됩니다. 이 정책은 판매하는 제품에 대해 언어 모델을 사용하지 않는 것이 좋습니다.</block>
@@ -514,4 +513,5 @@
   <block id="aa475deb1febd97e43051f4cd6e0e03c" category="paragraph">다음 비디오에서는 이 두 가지 옵션에 대해 간략하게 설명합니다.</block>
   <block id="d2a6bdb03847dd26c195e27066ccdb58" category="paragraph">새 브라우저 탭이 열리고 GitHub 양식이 표시되며 이 양식을 사용하여 문서 팀에 세부 정보를 제공할 수 있습니다.</block>
   <block id="60a186f1a1bf3949fd214cb8c41bc66f" category="paragraph">새 브라우저 탭이 열리고 문서 사이트의 GitHub 저장소에 있는 파일로 이동합니다.</block>
+  <block id="864a308d9063db9563fd2862dc533628" category="list-text">기밀 문서 또는 새로 작성된 콘텐츠를 AI(ChatGPT 또는 기타 도구)로 보내지 마십시오. ChatGPT에 공급되는 모든 정보는 교육 데이터 세트의 일부가 되며, 이 데이터 세트는 OpenAI의 자산이 되고 이를 통해 사용자와 해당 사용자가 사용할 수 있습니다. 이러한 데이터의 대부분은 공개적으로 액세스할 수 있지만, 우리는 자사 IP를 통해 모델을 교육하고 싶지 않습니다.</block>
 </blocks>
