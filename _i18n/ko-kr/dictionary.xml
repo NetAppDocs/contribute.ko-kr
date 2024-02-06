@@ -306,9 +306,7 @@
   <block id="3f347890f95ef75c2eacb4f01c622ac9" category="cell">자, 그럼</block>
   <block id="db8b923a9180129ba0052fbcd986f8b9" category="cell">그렇지 않았습니다</block>
   <block id="59a7709f7ee8c9dadf75615cbe4a79cf" category="cell">그렇지 않습니다</block>
-  <block id="3c2bb9e95fa5b8a7d4e0a0d41ad5b86f" category="cell">안 함(향후 시제가 필요한 경우)</block>
   <block id="5970929a425637241abb7a44591e32b3" category="cell">하지 마십시오</block>
-  <block id="a4b1e16e36a349a9247d2137cac483f8" category="cell">(향후 시제가 필요한 경우)</block>
   <block id="fa4dcd229606d27eb80b780e6fb39231" category="list-text">이해 및 번역이 어려운 다음과 같은 금기사항은 사용하지 마십시오.</block>
   <block id="ab3eb88106f999d04a740ab008a0767b" category="section-title">확인("확인" 또는 "확인"과 비교)</block>
   <block id="164762d67b4e5fe97d86d9a9f282ea25" category="list-text">"확인"을 사용하여 "확인"을 말합니다. "해당"을 적절히 포함시키십시오. "그림 주위에 충분한 공백이 있는지 확인하십시오."</block>
@@ -487,7 +485,6 @@
   <block id="e298d7e5e24682a3c8bdbb35a4fe032b" category="list-text">작성 중인 페이지 내에서 일관성을 유지합니다.</block>
   <block id="5759b7c5715d057d5710c3f672f2fa6b" category="cell">그렇지 않습니다</block>
   <block id="56de9219979795654f00a462f479b92d" category="cell">모두 가능합니다</block>
-  <block id="284097c621ee43e2ed3a2212d29102f5" category="cell">(미래 시제가 필요한 경우)</block>
   <block id="d90e297e46a1967fdcc50b1b348bfb6d" category="cell">그럴 겁니다</block>
   <block id="80d265e5e803c6d25656a0342dfe9058" category="cell">그래야 합니다</block>
   <block id="0eab61dbc3e8ad63324f3382baf86ac7" category="cell">그렇지 않을 것입니다</block>
@@ -514,4 +511,9 @@
   <block id="d2a6bdb03847dd26c195e27066ccdb58" category="paragraph">새 브라우저 탭이 열리고 GitHub 양식이 표시되며 이 양식을 사용하여 문서 팀에 세부 정보를 제공할 수 있습니다.</block>
   <block id="60a186f1a1bf3949fd214cb8c41bc66f" category="paragraph">새 브라우저 탭이 열리고 문서 사이트의 GitHub 저장소에 있는 파일로 이동합니다.</block>
   <block id="864a308d9063db9563fd2862dc533628" category="list-text">기밀 문서 또는 새로 작성된 콘텐츠를 AI(ChatGPT 또는 기타 도구)로 보내지 마십시오. ChatGPT에 공급되는 모든 정보는 교육 데이터 세트의 일부가 되며, 이 데이터 세트는 OpenAI의 자산이 되고 이를 통해 사용자와 해당 사용자가 사용할 수 있습니다. 이러한 데이터의 대부분은 공개적으로 액세스할 수 있지만, 우리는 자사 IP를 통해 모델을 교육하고 싶지 않습니다.</block>
+  <block id="733e053a02d21c4877d499d0fbb4c11d" category="list-text">할 수 없습니다</block>
+  <block id="19aac40a7d990d8b8aa21091fd07466d" category="list-title">향후 시제가 필요할 때는 이러한 수축기를 사용하지 마십시오.</block>
+  <block id="fc8b507a72b6956dbc043bfe0002b248" category="list-text">그럼</block>
+  <block id="b7a61cf5d29e4ad809c301c74229b078" category="list-text">그렇지 않습니다</block>
+  <block id="fa6c9d5de251d2da13b9f81db8da0ca6" category="list-text">그럼</block>
 </blocks>
