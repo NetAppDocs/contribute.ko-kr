@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head class="at-element-marker">
+  <title>AsciiiDoc 참조</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="AsciiiDoc 참조" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html" />
+	<meta property="og:description" content="" />
+  <meta property="og:image" content="https://docs.netapp.com/ko-kr/contribute/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
+  <link rel="icon" href="/ko-kr/contribute/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/contribute/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ko-kr/contribute/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ko-kr/contribute/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/contribute/asciidoc_syntax.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/contribute/asciidoc_syntax.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/contribute/js/na-search.js'></script><script src='/ko-kr/contribute/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ko-kr/contribute/js/custom-dropdown.js'></script>
+  <script src='/ko-kr/contribute/js/FileSaver.min.js'></script>
+  <script src='/ko-kr/contribute/js/jszip-utils.min.js'></script>
+  <script src='/ko-kr/contribute/js/jszip.min.js'></script><script src='/ko-kr/contribute/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ko-kr/contribute/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/kr">
+                <image id="ie-header-logo" src="/ko-kr/contribute/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">문서</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ko-kr/contribute/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">한국어</span>
+                    <img src="/ko-kr/contribute/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ko-kr/contribute/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/contribute/asciidoc_syntax.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ko-kr/contribute/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">모든 NetApp</span>
+                    <img src="/ko-kr/contribute/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ko-kr/contribute/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">지원</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">기술 자료</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/ko/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">교육</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ko-kr/contribute/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ko-kr/contribute/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">모든 문서</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ko-kr/contribute/">-->
+      Contributor's Guide
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ko-kr/contribute/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ko-kr/contribute/search.html" 
+        data-type="widget"
+        data-placeholder="설명서 검색"
+        data-no-results-found="{query}에 대한 결과를 찾을 수 없습니다"
+        data-did-you-mean="{suggestion}을(를) 검색하십시오."
+        data-no-results-found-did-you-mean="{query}에 대한 결과가 없습니다. {suggestion}을(를) 찾고 계시는 건가요?"
+        data-results-found="{hitCount}개의 결과를 찾았습니다"
+        data-error-message="오류가 발생했습니다. 다시 시도해 주십시오."
+        data-error-reset="검색 재설정"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="콘텐츠 기고"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/asciidoc_syntax.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/contribute/index.html">
+        콘텐츠 기고
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp 문서의 스타일"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/asciidoc_syntax.html" 
+      dale-entry-url="/style.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/contribute/style.html">
+        NetApp 문서의 스타일
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AsciiiDoc 참조"
+      data-li-level="1#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/asciidoc_syntax.html" 
+      dale-entry-url="/asciidoc_syntax.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/contribute/asciidoc_syntax.html">
+        AsciiiDoc 참조
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AI로 생성된 콘텐츠에 대한 정책"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/asciidoc_syntax.html" 
+      dale-entry-url="/ai-policy.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/contribute/ai-policy.html">
+        AI로 생성된 콘텐츠에 대한 정책
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="법적 고지"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/asciidoc_syntax.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/contribute/legal-notices.html">
+        법적 고지
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ko-kr/contribute"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ko-kr/contribute"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ko-kr/contribute/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 본 한국어 번역은 사용자 편의를 위해 제공되는 기계 번역입니다. 영어 버전과 한국어 버전이 서로 어긋나는 경우에는 언제나 영어 버전이 우선합니다. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">AsciiiDoc 참조</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2024-02-06 15:14:20 +0000">02/06/2024</time>
+        
+    
+    
+        <span>기여자
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ko-kr/contribute/images/discuss-sm.svg" alt="" class="github-icon" />변경 제안</span>
+        <img src="/ko-kr/contribute/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ko-kr/contribute/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/contribute.ko-kr/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ko-kr/contribute/asciidoc_syntax.html&page-title=AsciiiDoc 참조" class="page-nav-contribute-link" role="button">문서 변경사항 요청</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/contribute/blob/main/asciidoc_syntax.adoc" class="page-nav-contribute-link" role="button">이 페이지 편집</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link" style="visibility: hidden;" >기여하는 방법 알아보기</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ko-kr/contribute/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ko-kr/contribute/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ko-kr/contribute/pdfs/fullsite-sidebar/GitHub에서_NetApp_기술_콘텐츠에_기고하십시오.pdf" >
+                    <img src="/ko-kr/contribute/images/pdf-icon.png" alt="" width="16" height="16"/>이 문서 사이트의 PDF</a>
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ko-kr/contribute/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>AsciiiDoc는 Markdown과 유사한 간단한 마크업 언어입니다. 표준 Markdown 대신 AsciiiDoc를 선택했습니다. 이 제품은 더 많은 기본 기능을 제공하기 때문입니다. 더 강력하지만 사용도 간편합니다. 아래 섹션을 참조하여 AsciiiDoc에 쓰기를 시작하십시오.</p>
+</div>
+<div class="paragraph">
+<p>를 참조하십시오 <a href="http://asciidoctor.org/docs/user-manual/" target="_blank" rel="noopener">"AsciiDoctor 사용 설명서"</a> 추가 도움말을 참조하십시오.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="기본-사항">기본 사항</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>간단한 문서 업데이트를 위해 몇 가지 사항을 알고 있어야 합니다.</p>
+</div>
+<div class="sect2">
+<h3 id="제목">제목</h3>
+<div class="literalblock">
+<div class="content">
+<pre>= Page title
+== Level 1 section
+=== Level 2 section
+==== Level 3 section
+===== Level 4 section</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>페이지 제목은 하나만 지정할 수 있지만 섹션 제목은 여러 개일 수 있습니다. 예를 들어, 레벨 2 및 레벨 3 섹션이 포함된 레벨 1 섹션 3개가 있을 수 있습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>= Page title
+== Level 1 section
+=== Level 2 section
+== Level 1 section
+== Level 1 section
+=== Level 2 section
+==== Level 3 section</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="굵은-텍스트">굵은 텍스트</h3>
+<div class="literalblock">
+<div class="content">
+<pre>*Text*</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="기울임꼴-텍스트">기울임꼴 텍스트</h3>
+<div class="literalblock">
+<div class="content">
+<pre>_Text_</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="글머리-기호-목록">글머리 기호 목록</h3>
+<div class="literalblock">
+<div class="content">
+<pre>* Item 1
++
+Continuation text for the previous list item.
+
+* Item 2
+** Item 2a
+
+* Item 3</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+는 목록 연속입니다. 이 경우 텍스트가 목록 항목과 인라인 상태로 유지됩니다. 를 생략하면 해당 줄의 서식에 영향을 줍니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="라벨이-붙은-목록">라벨이 붙은 목록</h3>
+<div class="literalblock">
+<div class="content">
+<pre>Item 1::
+Description 1
+
+Item 2::
+Description 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>또는</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[horizontal]
+Item 1::
+Description 1
+
+Item 2::
+Description 2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>항목 1 위에 [horizontal](수평)을 추가하면 레이블과 설명이 같은 줄에 나타납니다. 아주 짧은 설명을 할 때 잘 작동합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[수평] * 가 없는 예</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">항목 1</dt>
+<dd>
+<p>설명 1</p>
+</dd>
+<dt class="hdlist1">항목 2</dt>
+<dd>
+<p>설명 2</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>[수평] * 의 예</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">항목 1</dt>
+<dd>
+<p>설명 1</p>
+</dd>
+<dt class="hdlist1">항목 2</dt>
+<dd>
+<p>설명 2</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="단계">단계</h3>
+<div class="literalblock">
+<div class="content">
+<pre>.Steps
+
+. Step 1
+
+. Step 2
++
+Info for step 2
+
+. Step 3
+.. Step 3a
+.. Step 3b
+
+. Step 4</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+는 목록 연속입니다. 이 경우 텍스트가 목록 항목과 인라인 상태로 유지됩니다. 를 생략하면 해당 줄의 서식에 영향을 줍니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="이미지">이미지</h3>
+<div class="literalblock">
+<div class="content">
+<pre>image:file.png["alt text"]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>alt text_는 대체 텍스트를 의미합니다. 페이지에 표시되는 이미지를 설명합니다. 주요 용도는 화면 판독기를 사용하는 시각 장애가 있는 사용자를 위한 것입니다.</p>
+</div>
+<div class="paragraph">
+<p>참고 사항 2개:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>쉼표와 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 Alt 텍스트를 따옴표로 묶는 것이 좋습니다.</p>
+</li>
+<li>
+<p>를 클릭합니다 <a href="https://docs.asciidoctor.org/asciidoc/latest/macros/images/" target="_blank" rel="noopener">"AsciiDoctor 문서"</a> _block images_는 _two_콜론('image::file.png')과 함께 자체 행에 있어야 한다고 기술하십시오</p>
+<div class="paragraph">
+<p>그러나 위에 표시된 것처럼 한 개의 콜론을 사용하는 것이 좋습니다. 하나의 콜론을 사용하면 동일한 결과가 도출되며 내부 도구에서 더 잘 작동합니다.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="비디오">비디오</h3>
+<div class="paragraph">
+<p>YouTube에서 호스팅됨:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>video::id[youtube]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>GitHub에서 로컬로 호스팅:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>video::file.mp4</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="링크">링크</h3>
+<div class="paragraph">
+<p>사용해야 하는 구문은 연결할 내용에 따라 다릅니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#외부-사이트에-대한-링크입니다">외부 사이트에 대한 링크입니다</a></p>
+</li>
+<li>
+<p><a href="#같은-페이지의-섹션에-대한-링크입니다">같은 페이지의 섹션에 대한 링크입니다</a></p>
+</li>
+<li>
+<p><a href="#문서의-다른-페이지에-대한-링크입니다">문서의 다른 페이지에 대한 링크입니다</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="외부-사이트에-대한-링크입니다">외부 사이트에 대한 링크입니다</h4>
+<div class="literalblock">
+<div class="content">
+<pre>url[link text^]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>^는 새 브라우저 탭에서 링크를 엽니다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="같은-페이지의-섹션에-대한-링크입니다">같은 페이지의 섹션에 대한 링크입니다</h4>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;section_title&gt;&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For more details, see &lt;&lt;Headings&gt;&gt;.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>링크 텍스트는 섹션 제목 이외의 다른 텍스트가 될 수 있습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;section_title,Different link text&gt;&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;Headings,Learn the syntax for headings&gt;&gt;.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="문서의-다른-페이지에-대한-링크입니다">문서의 다른 페이지에 대한 링크입니다</h4>
+<div class="paragraph">
+<p>파일이 동일한 GitHub 저장소에 있어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:&lt;file_name&gt;.html[Link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>파일의 섹션에 직접 연결하려면 해시(#)와 섹션의 제목을 추가합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:&lt;file_name&gt;.html#&lt;section-name-using-dashes-and-all-lower-case&gt;[Link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:style.html#use-simple-words[Use simple words]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="참고-팁-및-주의">참고, 팁 및 주의</h3>
+<div class="paragraph">
+<p>메모, 팁 또는 주의 문구를 사용하여 특정 문장에 주의를 기울여야 할 수 있습니다. 다음과 같이 형식을 지정합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>NOTE: text
+
+TIP: text
+
+CAUTION: text</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이러한 각 항목은 조금만 사용하십시오. 노트와 팁이 가득 찬 페이지는 만들지 않아도 됩니다. 그렇게 하면 의미가 떨어집니다.</p>
+</div>
+<div class="paragraph">
+<p>AsciiiiDoc 콘텐츠를 HTML로 전환할 때 각 내용이 어떻게 보이는지 살펴보겠습니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/note.svg" alt="참고">
+</td>
+<td class="content">
+이것은 참고입니다. 여기에는 독자가 알아야 할 추가 정보가 포함되어 있습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+팁은 사용자가 무언가를 하거나 무언가를 이해하는 데 도움이 되는 유용한 정보를 제공합니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/caution.svg" alt="주의">
+</td>
+<td class="content">
+주의할 경우 독자는 신중하게 행동하도록 조언합니다. 이 기능은 드문 경우에 사용합니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="고급-항목">고급 항목</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>새 콘텐츠를 작성하는 경우 이 섹션에서 몇 가지 세부적인 내용을 검토할 수 있습니다.</p>
+</div>
+<div class="sect2">
+<h3 id="문서-머리글">문서 머리글</h3>
+<div class="paragraph">
+<p>각 AsciiDoc 파일에는 두 가지 유형의 헤더가 포함되어 있습니다. 첫 번째는 GitHub를 위한 것이고 두 번째는 AsciiiDoc 콘텐츠를 HTML로 전환하는 게시 도구인 AsciiDoctor를 위한 것입니다.</p>
+</div>
+<div class="paragraph">
+<p>GitHub 헤더는 .adoc 파일의 첫 번째 콘텐츠 세트입니다. 여기에는 다음이 포함되어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>---
+sidebar: sidebar
+permalink: &lt;file_name&gt;.html
+keywords: keyword1, keyword2, keyword3, keyword4, keyword5
+summary: "A summary."
+---</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>키워드 및 요약은 검색 결과에 직접 영향을 줍니다. 실제로 검색 결과에 요약 자체가 표시됩니다. 사용자 편의성이 있는지 확인해야 합니다. 모범 사례는 요약 내용이 리드 단락에 반영되도록 하는 것입니다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+콜론과 같은 문장 부호는 콘텐츠를 AsciiiDoc에서 HTML로 변환하는 기능에 영향을 줄 수 있으므로 요약은 따옴표로 묶는 것이 좋습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>다음 머리글은 문서 제목 바로 아래에 표시됩니다( 참조) <a href="#제목">제목</a>)를 클릭합니다. 이 헤더에는 다음이 포함되어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이 머리글의 매개 변수를 터치할 필요는 없습니다. 그냥 붙여넣고 잊어버리면 됩니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="리드-단락">리드 단락</h3>
+<div class="paragraph">
+<p>문서 제목 아래에 나타나는 첫 번째 단락에는 바로 위에 다음 구문이 포함되어야 합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[.lead]
+This is my lead paragraph for this content.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>[.lead] 뒤에 오는 텍스트와 다른 형식의 CSS 서식을 리드 단락에 적용합니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="표">표</h3>
+<div class="paragraph">
+<p>기본 테이블에 대한 구문은 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[cols=2*,options="header",cols="25,75"]
+|===
+| heading column 1
+| heading column 2
+| row 1 column 1 | row 1 column 2
+| row 2 column 1 | row 2 column 2
+|===</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>테이블의 서식을 지정하는 방법은 _many_가지가 있습니다. 을 참조하십시오 <a href="https://asciidoctor.org/docs/user-manual/#tables" target="_blank" rel="noopener">"AsciiDoctor 사용 설명서"</a> 추가 도움말을 참조하십시오.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/tip.svg" alt="팁">
+</td>
+<td class="content">
+셀에 글머리 기호 목록과 같은 서식이 지정된 콘텐츠가 포함된 경우 열 머리글에 "A"를 추가하여 서식을 지정하는 것이 좋습니다. 예: [cols="2,2,4a" 옵션="header"]
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables" target="_blank" rel="noopener">"자세한 표 예제는 AsciiiDoc 구문 빠른 참조 를 참조하십시오"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="작업-제목">작업 제목</h3>
+<div class="paragraph">
+<p>작업을 수행하는 방법을 설명하는 경우 단계를 시작하기 전에 소개 정보를 포함할 수 있습니다. 단계를 완료한 후 수행해야 할 작업을 말해야 할 수도 있습니다. 이 경우, 스캔을 가능하게 하는 헤더를 사용하여 해당 정보를 구성하는 것이 가장 좋습니다.</p>
+</div>
+<div class="paragraph">
+<p>필요에 따라 다음 제목을 사용합니다.</p>
+</div>
+<div class="paragraph">
+<div class="title">필요한 것</div>
+<p>_ 사용자가 작업을 완료하는 데 필요한 정보입니다. _</p>
+</div>
+<div class="paragraph">
+<div class="title">이 작업에 대해</div>
+<p>_ 사용자가 이 작업에 대해 알아야 할 일부 추가 컨텍스트 정보입니다. _</p>
+</div>
+<div class="paragraph">
+<div class="title">단계</div>
+<p>_ 작업을 완료하기 위한 개별 단계. _</p>
+</div>
+<div class="paragraph">
+<div class="title">다음 단계</div>
+<p>_ 사용자가 다음에 수행해야 하는 작업. _</p>
+</div>
+<div class="paragraph">
+<p>각 항목은 을 포함해야 합니다. 텍스트 바로 앞에 다음과 같이 표시됩니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>.What you'll need
+.About this task
+.Steps
+.What's next?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이 구문은 큰 글꼴로 굵은 텍스트를 적용합니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="명령-구문">명령 구문</h3>
+<div class="paragraph">
+<p>명령어 입력 시, 'Monospace 폰트 적용:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`volume show -is-encrypted true`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>다음과 같은 모양이 나타납니다.</p>
+</div>
+<div class="paragraph">
+<p>볼륨 쇼는 암호화된 사실이다</p>
+</div>
+<div class="paragraph">
+<p>명령 출력 또는 명령 예는 다음 구문을 사용합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>----
+cluster2::&gt; volume show -is-encrypted true
+
+Vserver  Volume  Aggregate  State  Type  Size  Available  Used
+-------  ------  ---------  -----  ----  -----  --------- ----
+vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%
+----</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>대시 4개를 사용하면 서로 다른 텍스트 줄을 입력할 수 있습니다. 그 결과는 다음과 같습니다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster2::&gt; volume show -is-encrypted true
+
+Vserver  Volume  Aggregate  State  Type  Size  Available  Used
+-------  ------  ---------  -----  ----  -----  --------- ----
+vs1      vol1    aggr2     online    RW  200GB    160.0GB  20%</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="변수-텍스트">변수 텍스트</h3>
+<div class="paragraph">
+<p>명령 및 명령 출력에서 변수 텍스트를 밑줄로 묶고 기울임꼴을 적용합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`vserver nfs modify -vserver _name_ -showmount enabled`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이 명령과 변수 텍스트는 다음과 같습니다.</p>
+</div>
+<div class="paragraph">
+<p>'vserver nfs modify -vserver_name_-showmount enabled'</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/contribute/images/note.svg" alt="참고">
+</td>
+<td class="content">
+밑줄은 현재 코드 구문 강조 표시로는 지원되지 않습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="코드-구문-강조-표시">코드 구문 강조 표시</h3>
+<div class="paragraph">
+<p>코드 구문 강조 표시는 가장 널리 사용되는 언어를 문서화하는 개발자 중심의 솔루션을 제공합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>출력 예 1 *</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-http" data-lang="http">POST https://netapp-cloud-account.auth0.com/oauth/token
+Header: Content-Type: application/json
+Body:
+{
+              "username": "&lt;user_email&gt;",
+              "scope": "profile",
+              "audience": "https://api.cloud.netapp.com",
+              "client_id": "UaVhOIXMWQs5i1WdDxauXe5Mqkb34NJQ",
+              "grant_type": "password",
+              "password": "&lt;user_password&gt;"
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>출력 예 2 *</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">[
+    {
+        "header": {
+            "requestId": "init",
+            "clientId": "init",
+            "agentId": "init"
+        },
+        "payload": {
+            "init": {}
+        },
+        "id": "5801"
+    }
+]</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>지원되는 언어 *</p>
+</li>
+<li>
+<p>Bash</p>
+</li>
+<li>
+<p>말림</p>
+</li>
+<li>
+<p>HTTPS</p>
+</li>
+<li>
+<p>JSON을 참조하십시오</p>
+</li>
+<li>
+<p>PowerShell을 사용합니다</p>
+</li>
+<li>
+<p>인형</p>
+</li>
+<li>
+<p>파이썬</p>
+</li>
+<li>
+<p>YAML</p>
+</li>
+<li>
+<p>구현 *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>다음 구문을 복사하여 붙여 넣은 다음 지원되는 언어와 코드를 추가합니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[source,&lt;language&gt;]
+&lt;code&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[source,curl]
+curl -s https:///v1/ \
+-H accept:application/json \
+-H "Content-type: application/json" \
+-H api-key: \
+-H secret-key: \
+-X [GET,POST,PUT,DELETE]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="컨텐츠-재사용">컨텐츠 재사용</h3>
+<div class="paragraph">
+<p>여러 페이지에 걸쳐 반복되는 콘텐츠 청크가 있는 경우 한 번 손쉽게 작성한 다음 해당 페이지 전체에서 다시 사용할 수 있습니다. 재사용은 동일한 리포지토리 내에서 여러 리포지토리에서 가능합니다. 작동 방식은 다음과 같습니다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>리포지터리에 _include라는 이름의 폴더를 만듭니다</p>
+<div class="paragraph">
+<p><a href="https://github.com/NetAppDocs/cloud-tiering" target="_blank" rel="noopener">"예를 들어, Cloud Tiering 저장소를 살펴보겠습니다"</a>.</p>
+</div>
+</li>
+<li>
+<p>다시 사용할 콘텐츠가 포함된 .adoc 파일을 해당 폴더에 추가합니다.</p>
+<div class="paragraph">
+<p>문장, 목록, 표, 하나 이상의 섹션 등이 될 수 있습니다. 파일에 다른 어떤 것도 포함시키지 마십시오. 머리글이나 다른 것은 없습니다.</p>
+</div>
+</li>
+<li>
+<p>이제 해당 콘텐츠를 다시 사용할 파일로 이동합니다.</p>
+</li>
+<li>
+<p>_Same_GitHub 리포지토리 내에서 콘텐츠를 재사용하는 경우, 한 줄에 다음 구문을 사용합니다.</p>
+<div class="literalblock">
+<div class="content">
+<pre>include::_include/&lt;filename&gt;.adoc[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> include::_include/s3regions.adoc[]
+. _different_repository에서 콘텐츠를 재사용하는 경우 한 줄에 다음 구문을 사용합니다.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>include::https://raw.githubusercontent.com/NetAppDocs/&lt;reponame&gt;/main/_include/&lt;filename&gt;.adoc[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>예를 들면 다음과 같습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>include::https://raw.githubusercontent.com/NetAppDocs/cloud-tiering/main/_include/s3regions.adoc[]</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>바로 그겁니다!</p>
+</div>
+<div class="paragraph">
+<p>Include 지시문에 대한 자세한 내용을 보려면 <a href="https://asciidoctor.org/docs/user-manual/#include-directive" target="_blank" rel="noopener">"AsciiDoctor 사용 설명서를 확인하십시오"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ko-kr/contribute/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ko-kr/contribute/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">이 페이지에서</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">이용 약관</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">개인 정보 보호 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">쿠키 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">쿠키 설정</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">이 페이지에 대한 피드백 보내기</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ko-kr/contribute/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ko-kr/contribute/js/prism.js'></script>
+      <script type="text/javascript" src='/ko-kr/contribute/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ko-kr/contribute/js/ie-tabbed-blocks.js'></script>
+    <script src='/ko-kr/contribute/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
