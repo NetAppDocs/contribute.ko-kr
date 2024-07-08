@@ -223,12 +223,6 @@
   <block id="97aba9ddd85fa7db3ab0975897188664" category="inline-link">메리암 - 웹스터 사전 온라인</block>
   <block id="a5c0a6970afaed0f8993e80f0367d714" category="list-text"><block ref="a5c0a6970afaed0f8993e80f0367d714" category="inline-link-rx"></block></block>
   <block id="33f6518588649a99a675cf3b6920a297" category="section-title">주의</block>
-  <block id="51081b1df080a1e17eccc89518ca8d20" category="paragraph">다음 레이블을 사용하여 기본 콘텐츠 흐름과 별도로 콘텐츠를 식별합니다.</block>
-  <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">참고</block>
-  <block id="1eab470a6f707b92e15040773251a746" category="list-text">팁</block>
-  <block id="80de2a8faacb1711bb579e0ee9293a10" category="paragraph">항상 모범 사례 정보를 기본적으로 문서화하는 것이 당사의 정책이므로 팁을 가급적 사용하지 마십시오. 필요한 경우 팁을 사용하여 사용자가 제품을 사용하거나 단계 또는 작업을 쉽고 효율적으로 완료할 수 있도록 도와주는 모범 사례 정보를 포함합니다.</block>
-  <block id="18a970540d05e11964e25e6c04e72b53" category="list-text">주의</block>
-  <block id="acf7e64aba7071e147e493ba4b62b706" category="paragraph">사용자에게 치명적이거나 극히 위험한 신체 상해가 발생할 수 있는 조건이나 절차에 대해 경고하려면 주의를 기울이십시오.</block>
   <block id="07ccfe360dce69b84595428e2ec1c1cc" category="section-title">또한</block>
   <block id="06957db97049767f064edfa829e41728" category="list-text">"추가"를 의미하려면 "또한"를 사용하십시오.</block>
   <block id="db9cdfa0cd758f90d8341ab3a5f4ff2b" category="section-title">및/또는</block>
@@ -507,7 +501,6 @@
   <block id="955abac4e6854335582815280aaf36b4" category="paragraph">전 세계 고객을 위해 다음 지침을 따르십시오.</block>
   <block id="09fe3985f91385714baf11e8ccf88305" category="section-title">능동형 음성(수동형 음성 대비)</block>
   <block id="9f9f2635eab2378cac8b309f14376108" category="paragraph">을 참조하십시오 <block ref="0c285b154ac93c1540ae9e5281017dec" category="inline-xref-macro-rx"></block>.</block>
-  <block id="9a7a2c05bfc68a16b33bc5aeb9281db6" category="paragraph">나머지 텍스트와 구분되어야 하는 중요한 정보는 참고를 사용하십시오. 사용자가 작업에 대해 배우거나 작업을 완료하는 데 필요하지 않은 "유용한 정보" 정보는 참고를 사용하지 마십시오.</block>
   <block id="6647a0d8ddca3a32764030eaa8d33eaf" category="section-title">이후(대 "한 번")</block>
   <block id="dbb3ad88bf35c794d6f4916649c3a5f9" category="list-text">"컴퓨터를 연결한 후 컴퓨터를 켜십시오"라는 내용의 연대표를 나타내려면 "이후"를 사용하십시오.</block>
   <block id="c2173ab81c2076af318b1e50b4c92d38" category="list-text">"1회"를 사용하여 "1회"를 의미합니다.</block>
@@ -574,4 +567,17 @@
   <block id="b82c2c6f8dedbeb3f2192242dfb244ce" category="section-title">While (대 "browser")</block>
   <block id="a8725be5130c5015f50f29026862358e" category="list-text">"while"을 사용하여 시간 내에 발생한 것을 나타냅니다.</block>
   <block id="1f9e771dea99b07dbcdbe2912dc1adb2" category="list-text">거의 같은 시간 또는 다른 활동 직후에 발생하는 활동을 나타내려면 "도래"를 사용합니다.</block>
+  <block id="85d1422db3849226daed5a00eb7f27cf" category="section-title">약어 및 약어</block>
+  <block id="67e4f5c5f00a17a1b4ce3246a6964380" category="paragraph">잘 알려진 약어와 약어를 사용하여 친숙해지지만 명확성과 안정성에 부정적인 영향을 줄 수 있는 모호한 약어는 피하십시오. 약어 및 약어에 대한 추가 규칙은 를<block ref="129adddb06df0e4a944a90759a2b150f" category="inline-link-rx"></block>참조하십시오.</block>
+  <block id="bdfbb9ac9fe98f630d4d38fca776a609" category="paragraph">주의사항은 올바르게 사용할 때 강력한 도구입니다. 중요한 정보에 주의를 기울이거나 유용한 팁을 제공하거나 사용자에게 잠재적 위험에 대해 경고할 수 있습니다. 과도한 사용으로 인해 충격이 사라지고 사용자의 피로가 발생할 수 있습니다. 다음은 충고를 효과적으로 사용하기 위한 몇 가지 지침입니다.</block>
+  <block id="d8ef07099960f55e1ae0b761837ff69a" category="paragraph">다음 레이블을 사용하여 기본 콘텐츠 흐름에서 경고를 구분합니다.</block>
+  <block id="6119ac1a35955a26ef75d563906cbe3d" category="list-text">참고 참고를 사용하여 나머지 텍스트에서 두드러져야 하는 중요한 정보를 강조 표시합니다. 그러나 사용자가 작업을 이해하거나 완료하는 데 필요하지 않은 "알아두면 좋은" 정보에 대해서는 참고를 사용하지 마십시오. 메모의 목적은 독자가 간과할 수 있는 중요한 요점에 관심을 집중시키는 것입니다.</block>
+  <block id="35c3c4208d908b007bea369dcf24fbd6" category="list-text">팁 팁은 기본적으로 모범 사례 정보를 문서화하는 정책이므로 사용하지 않는 것이 좋습니다. 필요한 경우 팁을 사용하여 사용자가 제품을 사용하거나 단계 또는 작업을 보다 쉽고 효율적으로 완료하는 데 도움이 되는 모범 사례 정보를 강조합니다. 팁은 사용자의 경험을 향상시킬 수 있는 유용한 조언이나 단축키를 제공해야 합니다.</block>
+  <block id="f9157df517733068b87b36b76a31421e" category="list-text">주의 주의를 사용하여 부상 또는 장비 손상을 포함하여 바람직하지 않은 결과를 초래할 수 있는 조건이나 동작에 대해 사용자에게 경고합니다. 사용자가 유해 또는 중단을 방지하기 위해 피해야 할 잠재적 위험에 주의를 기울일 때 주의를 기울여야 합니다.</block>
+  <block id="f47ad409538c3949a332704503a8123a" category="list-title">추가 지침</block>
+  <block id="1468fb461f0c5feadd816a54f9094d1d" category="list-text">지원되는 애드온만 사용하십시오. 다른 종류의 서식은 지원되지 않습니다.</block>
+  <block id="16ef0cd6a13a91b99cf8dbc20e4c5c0a" category="list-text">과도한 사용을 피합니다. 과도한 사용으로 인해 사용자는 이러한 중요한 섹션을 건너뛰게 될 수 있습니다. 이러한 섹션을 문서의 "정크 서랍"으로 인식하기 때문입니다.</block>
+  <block id="7defe98212d28fe26abbe5a9cad4ae26" category="list-text">일반적으로, 알림 수를 페이지당 최대 3개까지 제한합니다.</block>
+  <block id="61eaa50fbc86f3a53385a189d01e4277" category="list-text">경고 내에서 명확하고 간결한 정보를 제공합니다. 메시지는 간결하고 요점을 강조하여 사용자가 제공된 정보의 중요성을 빠르게 이해할 수 있도록 해야 합니다.</block>
+  <block id="782ec3ae3054d5c9b55df66f9c637091" category="list-text">테이블에 있는 AsciiiDoc 훈장을 피하십시오. 참고, 팁 또는 주의로 식별해야 하는 내용은 참고:, 팁:, 또는 주의: 텍스트에 대한 인라인 리드 인입니다.</block>
 </blocks>
