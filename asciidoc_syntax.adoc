@@ -1,6 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: asciidoc_syntax.html 
+keywords: AsciiDoc, syntax, markup, documentation, NetApp 
+summary: AsciiiDoc 구문을 학습하여 NetApp 문서에 기여합니다. 
 ---
 = AsciiiDoc 참조
 :hardbreaks:

@@ -15,7 +15,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
-  <block id="927796bbaa454c7de262b6c5f63a9498" category="doc">GitHub에서 NetApp 기술 콘텐츠에 기고하십시오</block>
   <block id="5b1673a33a3bc92200f7685076cfb382" category="paragraph">NetApp 제품 및 서비스 설명서는 오픈 소스 에 있습니다. 따라서 개선, 수정 및 제안을 통해 콘텐츠에 기여할 수 있습니다. GitHub 계정과 작은 이니셔티브만 있으면 됩니다.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">개요</block>
   <block id="f1eb983643f08d3d76ff0c9dcdd99f9b" category="paragraph">다음 옵션을 사용하여 문서에 기여할 수 있습니다.</block>
@@ -591,4 +590,11 @@
   <block id="36744f1e0c64e2f519e59cccdba068a1" category="list-text">* 모범 사례 형식을 어떻게 지정합니까? *</block>
   <block id="c326700655ab8fca23fa2162a1adaa37" category="paragraph">모범 사례 형식을 사용하려면 문장 스타일의 대/소문자를 적용하고 모범 사례라는 용어를 굵게 표시한 다음 콜론과 공백을 추가합니다.</block>
   <block id="0c4265fbbfc82a92746e47643f565c1c" category="paragraph">일관성 있고 사용자에게 친숙한 형식으로 모범 사례 제시 문맥에 따라 글머리 기호 목록, 번호 매기기 목록 또는 단락이 될 수 있습니다. 예를 들어 * 모범 사례 *: 구성 변경 사항을 프로덕션에 적용하기 전에 항상 스테이징 환경에서 테스트하십시오.</block>
+  <block id="264e061aa850fbdff533ac273d529d09" category="summary">NetApp의 정책은 사람에 의해 검증되고 검증되지 않은 AI 생성 콘텐츠의 게시를 금지하는 것입니다.</block>
+  <block id="d0482f09772a334a3c8f4646a75d2ae4" category="summary">AsciiiDoc 구문을 학습하여 NetApp 문서에 기여합니다.</block>
+  <block id="a383d20edf0eed3b667f267bc4178aa1" category="summary">개선 사항, 수정 사항 및 제안을 통해 NetApp 제품 문서를 더 잘 작성할 수 있도록 도와주십시오.</block>
+  <block id="810127b15467af054cfb3174cf01513c" category="doc">GitHub에서 NetApp 제품 문서에 기여합니다</block>
+  <block id="5fc1774ab777f265a9e9e8436a4165bc" category="summary">우리의 스타일은 대화적이고 공감적이지만, 우리는 전문가답게 대화를 나누며 요점을 얻습니다.</block>
+  <block id="db974238714ca8de634a7ce1d083a14f" category="section-title">API를 참조하십시오</block>
+  <block id="e823e37af27041a01f75462ee35c0848" category="paragraph">API(응용 프로그래밍 인터페이스)는 특정 제품이나 서비스에 대한 액세스를 제공하는 단일 인터페이스를 의미합니다. 대규모 제품 API 내에서 _API_라는 용어를 사용하여 리소스 유형 또는 구성 요소와 관련된 각 끝점 집합을 참조합니다. 여러 개의 서로 다른 인터페이스를 참조할 때는 _aps_라는 용어를 사용합니다.</block>
 </blocks>
